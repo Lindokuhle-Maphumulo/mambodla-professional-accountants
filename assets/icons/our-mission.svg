@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <title>Our Mission</title>
+  <g fill="none" stroke="#07152F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="80" cy="80" r="54"/>
+    <circle cx="80" cy="80" r="35"/>
+    <circle cx="80" cy="80" r="15"/>
+    <path d="M80 26v-8M80 142v-8M26 80h-8M142 80h-8"/>
+    <path d="M80 80 119 41"/>
+    <path d="m108 39 11 2 2 11"/>
+  </g>
+  <circle cx="80" cy="80" r="6" fill="#C49A2C"/>
+  <path d="M80 26a54 54 0 0 1 38 16" fill="none" stroke="#C49A2C" stroke-width="7" stroke-linecap="round"/>
+</svg>

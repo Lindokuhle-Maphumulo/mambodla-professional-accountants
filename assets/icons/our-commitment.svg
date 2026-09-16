@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <title>Our Commitment</title>
+  <g fill="none" stroke="#07152F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 18 128 36v39c0 30-20 51-48 67C52 126 32 105 32 75V36L80 18Z"/>
+    <path d="m54 80 17 17 35-38"/>
+  </g>
+  <path d="M80 18 128 36" fill="none" stroke="#C49A2C" stroke-width="7" stroke-linecap="round"/>
+  <path d="m54 80 17 17 35-38" fill="none" stroke="#C49A2C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <title>Our Vision</title>
+  <g fill="none" stroke="#07152F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 80s21-34 56-34 56 34 56 34-21 34-56 34S24 80 24 80Z"/>
+    <circle cx="80" cy="80" r="17"/>
+    <path d="M80 24v16M80 120v16M24 80h16M120 80h16"/>
+  </g>
+  <circle cx="80" cy="80" r="6" fill="#C49A2C"/>
+  <path d="M80 46a34 34 0 0 1 24 10" fill="none" stroke="#C49A2C" stroke-width="7" stroke-linecap="round"/>
+</svg>
