@@ -1,1212 +1,820 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-ZA">
-<head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
-        name="description"
-        content="Mambodla Professional Accountants provides professional accounting, audit, tax, payroll and business advisory services."
-    >
+      name="description"
+      content="Mambodla Professional Accountants provides professional accounting, audit, tax, payroll and business advisory services."
+    />
 
     <title>Services | Mambodla Professional Accountants</title>
 
     <style>
-        @view-transition {
-            navigation: auto;
-        }
+      @view-transition {
+        navigation: auto;
+      }
     </style>
 
-    <link
-    rel="stylesheet"
-    href="css/style.css"
->
+    <link rel="stylesheet" href="css/style.css" />
 
-<script src="js/transition-nav.js"></script>
+    <script src="js/transition-nav.js"></script>
 
-<link
-    rel="expect"
-    href="#page-lead"
-    blocking="render"
->
+    <link rel="expect" href="#page-lead" blocking="render" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- =====================================================
          HEADER
     ====================================================== -->
 
     <header class="site-header">
+      <div class="container header-inner">
+        <a
+          href="index.html"
+          class="brand"
+          aria-label="Mambodla Professional Accountants home"
+        >
+          <img
+            src="assets/logo/mambodla-logo.svg"
+            alt="Mambodla Professional Accountants"
+            class="brand-logo"
+          />
+        </a>
 
-        <div class="container header-inner">
+        <!-- Desktop Navigation -->
 
-            <a
-                href="index.html"
-                class="brand"
-                aria-label="Mambodla Professional Accountants home"
-            >
-                <img
-                    src="assets/logo/mambodla-logo.svg"
-                    alt="Mambodla Professional Accountants"
-                    class="brand-logo"
-                >
-            </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link"> Home </a>
 
+          <a href="about.html" class="nav-link"> About </a>
 
-            <!-- Desktop Navigation -->
+          <a href="services.html" class="nav-link active" aria-current="page">
+            Services
+          </a>
 
-            <nav
-                class="desktop-nav"
-                aria-label="Primary navigation"
-            >
-                <a href="index.html" class="nav-link">
-                    Home
-                </a>
+          <a href="insights.html" class="nav-link"> Insights </a>
 
-                <a href="about.html" class="nav-link">
-                    About
-                </a>
+          <a href="contact.html" class="nav-link"> Contact </a>
+        </nav>
 
-              <a
-    href="services.html"
-    class="nav-link active"
-    aria-current="page"
->
-    Services
-</a>
+        <!-- Mobile Menu Toggle -->
 
-                <a href="insights.html" class="nav-link">
-                    Insights
-                </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
-                <a href="contact.html" class="nav-link">
-                    Contact
-                </a>
-            </nav>
-
-
-            <!-- Mobile Menu Toggle -->
-
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Open navigation"
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-        </div>
-
-
-        <!-- =================================================
+      <!-- =================================================
              MOBILE NAVIGATION
         ================================================== -->
 
-        <nav
-            class="mobile-nav"
-            id="mobile-menu"
-            aria-label="Mobile navigation"
-        >
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation">
+        <div class="mobile-nav-panel">
+          <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link"> Home </a>
 
-            <div class="mobile-nav-panel">
+            <a href="about.html" class="mobile-nav-link"> About </a>
 
-                <div class="mobile-nav-links">
+            <a
+              href="services.html"
+              class="mobile-nav-link active"
+              aria-current="page"
+            >
+              Services
+            </a>
 
-                    <a
-                        href="index.html"
-                        class="mobile-nav-link"
-                    >
-                        Home
-                    </a>
+            <a href="insights.html" class="mobile-nav-link"> Insights </a>
 
-                    <a
-                        href="about.html"
-                        class="mobile-nav-link"
-                    >
-                        About
-                    </a>
+            <a href="contact.html" class="mobile-nav-link"> Contact </a>
+          </div>
 
-                <a
-    href="services.html"
-    class="mobile-nav-link active"
-    aria-current="page"
->
-    Services
-</a>
+          <div class="mobile-nav-social">
+            <p>Connect with us</p>
 
-                    <a
-                        href="insights.html"
-                        class="mobile-nav-link"
-                    >
-                        Insights
-                    </a>
+            <div class="mobile-nav-social-links">
+              <a
+                href="https://www.facebook.com/share/p/1GCcvotiUQ/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on Facebook"
+              >
+                <img src="assets/social/facebook.svg" alt="" />
+              </a>
 
-                    <a
-                        href="contact.html"
-                        class="mobile-nav-link"
-                    >
-                        Contact
-                    </a>
+              <a
+                href="https://x.com/MambodlaA"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on X"
+              >
+                <img src="assets/social/x.svg" alt="" />
+              </a>
 
-                </div>
+              <a
+                href="https://www.linkedin.com/company/mambodla-professional-accountants/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on LinkedIn"
+              >
+                <img src="assets/social/linkedin.svg" alt="" />
+              </a>
 
-
-                <div class="mobile-nav-social">
-
-                    <p>
-                        Connect with us
-                    </p>
-
-                    <div class="mobile-nav-social-links">
-
-                        <a
-                            href="https://www.facebook.com/share/p/1GCcvotiUQ/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on Facebook"
-                        >
-                            <img
-                                src="assets/social/facebook.svg"
-                                alt=""
-                            >
-                        </a>
-
-                        <a
-                            href="https://x.com/MambodlaA"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on X"
-                        >
-                            <img
-                                src="assets/social/x.svg"
-                                alt=""
-                            >
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/company/mambodla-professional-accountants/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on LinkedIn"
-                        >
-                            <img
-                                src="assets/social/linkedin.svg"
-                                alt=""
-                            >
-                        </a>
-
-                        <a
-                            href="https://wa.me/27670776562"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on WhatsApp"
-                        >
-                            <img
-                                src="assets/social/whatsapp.svg"
-                                alt=""
-                            >
-                        </a>
-
-                    </div>
-
-                </div>
-
+              <a
+                href="https://wa.me/27670776562"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on WhatsApp"
+              >
+                <img src="assets/social/whatsapp.svg" alt="" />
+              </a>
             </div>
-
-        </nav>
-
+          </div>
+        </div>
+      </nav>
     </header>
-
 
     <!-- =====================================================
          SERVICES
     ====================================================== -->
 
     <main class="services-page">
-
-        <!-- =================================================
+      <!-- =================================================
              SERVICES HERO
         ================================================== -->
 
-        <section
-            class="services-hero"
-            id="page-lead"
-            aria-labelledby="services-hero-title"
-        >
+      <section
+        class="services-hero"
+        id="page-lead"
+        aria-labelledby="services-hero-title"
+      >
+        <div class="services-hero-content">
+          <p class="services-eyebrow">OUR SERVICES</p>
 
-            <div class="services-hero-content">
+          <h1 id="services-hero-title" class="services-hero-title">
+            <span>Expert solutions.</span>
+            <span class="gold-text">Real impact.</span>
+          </h1>
 
-                <p class="services-eyebrow">
-                    OUR SERVICES
-                </p>
+          <div class="services-hero-rule" aria-hidden="true"></div>
 
+          <p class="services-hero-description">
+            We provide professional services that bring clarity, ensure
+            compliance, and help your business grow with confidence.
+          </p>
+        </div>
 
-                <h1
-                    id="services-hero-title"
-                    class="services-hero-title"
-                >
-                    <span>Expert solutions.</span>
-                    <span class="gold-text">Real impact.</span>
-                </h1>
+        <!-- Subtle brand watermark -->
 
+        <img
+          src="assets/logo/mambodla-logo-icon.svg"
+          alt=""
+          class="services-hero-watermark"
+          aria-hidden="true"
+        />
 
-                <div
-                    class="services-hero-rule"
-                    aria-hidden="true"
-                ></div>
+        <!-- Gold vertical accent -->
 
+        <div class="services-hero-accent" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
 
-                <p class="services-hero-description">
-                    We provide professional services that bring clarity,
-                    ensure compliance, and help your business grow with
-                    confidence.
-                </p>
-
-            </div>
-
-
-            <!-- Subtle brand watermark -->
-
-            <img
-                src="assets/logo/mambodla-logo-icon.svg"
-                alt=""
-                class="services-hero-watermark"
-                aria-hidden="true"
-            >
-
-
-            <!-- Gold vertical accent -->
-
-            <div
-                class="services-hero-accent"
-                aria-hidden="true"
-            >
-                <span></span>
-            </div>
-
-        </section>
-
-        <!-- =====================================================
+      <!-- =====================================================
      SERVICES — OVERVIEW CARDS
 ====================================================== -->
 
-<section
-    class="services-overview"
-    aria-label="Our professional services"
->
-
-    <div class="services-overview-grid">
-
-        <!-- Accounting -->
-        <article
-    class="services-overview-card"
-    data-reveal
-    data-reveal-delay="0"
-    >
-
-            <div 
-            class="services-card-icon"
-            data-icon-motion
-            >
-                <img
-                    src="assets/icons/accounting-services.svg"
-                    alt=""
-                >
+      <section class="services-overview" aria-label="Our professional services">
+        <div class="services-overview-grid">
+          <!-- Accounting -->
+          <article
+            class="services-overview-card"
+            data-reveal
+            data-reveal-delay="0"
+          >
+            <div class="services-card-icon" data-icon-motion>
+              <img src="assets/icons/accounting-services.svg" alt="" />
             </div>
 
             <h2>Accounting</h2>
 
-            <div
-                class="services-card-rule"
-                aria-hidden="true"
-            ></div>
+            <div class="services-card-rule" aria-hidden="true"></div>
 
             <p>
-                Accurate financial management and reporting
-                to keep your business on track.
+              Accurate financial management and reporting to keep your business
+              on track.
             </p>
 
-            <a
-                href="#accounting"
-                class="services-card-link"
-            >
-                <span>Learn more</span>
-                <span aria-hidden="true">→</span>
+            <a href="#accounting" class="services-card-link">
+              <span>Learn more</span>
+              <span aria-hidden="true">→</span>
             </a>
+          </article>
 
-        </article>
-
-
-        <!-- Audit & Tax -->
-        <article
-    class="services-overview-card"
-    data-reveal
-    data-reveal-delay="1"
-        >
-
-            <div 
-            class="services-card-icon"
-            data-icon-motion
-            >
-                <img
-                    src="assets/icons/tax-services.svg"
-                    alt=""
-                >
+          <!-- Audit & Tax -->
+          <article
+            class="services-overview-card"
+            data-reveal
+            data-reveal-delay="1"
+          >
+            <div class="services-card-icon" data-icon-motion>
+              <img src="assets/icons/tax-services.svg" alt="" />
             </div>
 
             <h2>Audit &amp; Tax</h2>
 
-            <div
-                class="services-card-rule"
-                aria-hidden="true"
-            ></div>
+            <div class="services-card-rule" aria-hidden="true"></div>
 
             <p>
-                Independent assurance and tax solutions
-                to ensure compliance and minimise risk.
+              Independent assurance and tax solutions to ensure compliance and
+              minimise risk.
             </p>
 
-            <a
-                href="#audit-tax"
-                class="services-card-link"
-            >
-                <span>Learn more</span>
-                <span aria-hidden="true">→</span>
+            <a href="#audit-tax" class="services-card-link">
+              <span>Learn more</span>
+              <span aria-hidden="true">→</span>
             </a>
+          </article>
 
-        </article>
-
-
-        <!-- Payroll -->
-        <article
-    class="services-overview-card"
-    data-reveal
-    data-reveal-delay="2"
-        >
-
-            <div 
-            class="services-card-icon"
-            data-icon-motion
-            >
-                <img
-                    src="assets/icons/payroll-services.svg"
-                    alt=""
-                >
+          <!-- Payroll -->
+          <article
+            class="services-overview-card"
+            data-reveal
+            data-reveal-delay="2"
+          >
+            <div class="services-card-icon" data-icon-motion>
+              <img src="assets/icons/payroll-services.svg" alt="" />
             </div>
 
             <h2>Payroll</h2>
 
-            <div
-                class="services-card-rule"
-                aria-hidden="true"
-            ></div>
+            <div class="services-card-rule" aria-hidden="true"></div>
 
             <p>
-                Efficient payroll administration that ensures
-                accuracy, compliance and peace of mind.
+              Efficient payroll administration that ensures accuracy, compliance
+              and peace of mind.
             </p>
 
-            <a
-                href="#payroll"
-                class="services-card-link"
-            >
-                <span>Learn more</span>
-                <span aria-hidden="true">→</span>
+            <a href="#payroll" class="services-card-link">
+              <span>Learn more</span>
+              <span aria-hidden="true">→</span>
             </a>
+          </article>
 
-        </article>
-
-
-        <!-- Business Advisory -->
-        <article
-    class="services-overview-card"
-    data-reveal
-    data-reveal-delay="3"
-        >
-
-            <div 
-            class="services-card-icon"
-            data-icon-motion
-            >
-                <img
-                    src="assets/icons/business-advisory.svg"
-                    alt=""
-                >
+          <!-- Business Advisory -->
+          <article
+            class="services-overview-card"
+            data-reveal
+            data-reveal-delay="3"
+          >
+            <div class="services-card-icon" data-icon-motion>
+              <img src="assets/icons/business-advisory.svg" alt="" />
             </div>
 
             <h2>Business Advisory</h2>
 
-            <div
-                class="services-card-rule"
-                aria-hidden="true"
-            ></div>
+            <div class="services-card-rule" aria-hidden="true"></div>
 
             <p>
-                Strategic insights and practical advice
-                to help your business grow with confidence.
+              Strategic insights and practical advice to help your business grow
+              with confidence.
             </p>
 
-            <a
-                href="#business-advisory"
-                class="services-card-link"
-            >
-                <span>Learn more</span>
-                <span aria-hidden="true">→</span>
+            <a href="#business-advisory" class="services-card-link">
+              <span>Learn more</span>
+              <span aria-hidden="true">→</span>
             </a>
+          </article>
+        </div>
+      </section>
 
-        </article>
-
-    </div>
-
-</section>
-
-<!-- =====================================================
+      <!-- =====================================================
      SERVICES — HOW WE HELP
 ====================================================== -->
 
-<section class="services-detail">
-
-    <div class="services-detail-intro">
-
-        <div
-    class="services-detail-heading"
-    data-reveal
-        >
-
-            <p class="services-detail-eyebrow">
-                How We Help
-            </p>
+      <section class="services-detail">
+        <div class="services-detail-intro">
+          <div class="services-detail-heading" data-reveal>
+            <p class="services-detail-eyebrow">How We Help</p>
 
             <h2 class="services-detail-title">
-                <span>Focused expertise.</span>
-                <span class="gold-text">Measurable impact.</span>
+              <span>Focused expertise.</span>
+              <span class="gold-text">Measurable impact.</span>
             </h2>
+          </div>
 
-        </div>
-
-        <div
-    class="services-detail-intro-copy"
-    data-reveal
-    data-reveal-delay="1"
-        >
+          <div
+            class="services-detail-intro-copy"
+            data-reveal
+            data-reveal-delay="1"
+          >
             <p>
-                We combine technical excellence with a deep
-                understanding of your business to deliver
-                practical solutions that make a difference.
+              We combine technical excellence with a deep understanding of your
+              business to deliver practical solutions that make a difference.
             </p>
+          </div>
         </div>
 
-    </div>
-
-
-    <!-- =================================================
+        <!-- =================================================
          DETAILED SERVICE COLUMNS
     ================================================== -->
 
-    <div class="services-detail-grid">
-
-
-        <!-- Accounting — Flip Card Prototype -->
-<article
-    class="service-detail-column service-detail-column--flip"
-    id="accounting"
-    data-service-flip
-    data-reveal
-    data-reveal-delay="0"
->
-
-    <div class="service-flip-shell">
-
-        <div class="service-flip-inner">
-
-
-            <!-- =============================================
+        <div class="services-detail-grid">
+          <!-- Accounting — Flip Card Prototype -->
+          <article
+            class="service-detail-column service-detail-column--flip"
+            id="accounting"
+            data-service-flip
+            data-reveal
+            data-reveal-delay="0"
+          >
+            <div class="service-flip-shell">
+              <div class="service-flip-inner">
+                <!-- =============================================
                  FRONT
             ============================================== -->
 
-            <div
-                class="service-detail-face service-detail-front"
-                data-flip-front
-                aria-hidden="false"
-            >
-
                 <div
-    class="service-detail-icon"
-    data-icon-motion
+                  class="service-detail-face service-detail-front"
+                  data-flip-front
+                  aria-hidden="false"
                 >
-                    <img
-                        src="assets/icons/accounting-services.svg"
-                        alt=""
-                    >
-                </div>
+                  <div class="service-detail-icon" data-icon-motion>
+                    <img src="assets/icons/accounting-services.svg" alt="" />
+                  </div>
 
-                <p class="service-detail-label">
-                    Accounting
-                </p>
+                  <p class="service-detail-label">Accounting</p>
 
-                <h3>
-                    Financial clarity begins here.
-                </h3>
+                  <h3>Financial clarity begins here.</h3>
 
-                <div
-                    class="service-detail-rule"
-                    aria-hidden="true"
-                ></div>
+                  <div class="service-detail-rule" aria-hidden="true"></div>
 
-                <ul>
+                  <ul>
                     <li>Bookkeeping &amp; Financial Recording</li>
                     <li>Management Accounts &amp; Reporting</li>
                     <li>Financial Statements</li>
                     <li>Budgeting &amp; Forecasting</li>
                     <li>Cash Flow Management</li>
-                </ul>
+                  </ul>
 
-                <button
+                  <button
                     type="button"
                     class="service-detail-link service-flip-trigger"
                     data-flip-open
                     aria-expanded="false"
                     aria-controls="accounting-service-back"
-                >
+                  >
                     <span>Find out more</span>
                     <span aria-hidden="true">→</span>
-                </button>
+                  </button>
+                </div>
 
-            </div>
-
-
-            <!-- =============================================
+                <!-- =============================================
                  BACK
             ============================================== -->
 
-            <div
-                class="service-detail-face service-detail-back"
-                id="accounting-service-back"
-                data-flip-back
-                aria-hidden="true"
-                inert
-            >
-
-                <p class="service-detail-back-eyebrow">
-                    Why it matters
-                </p>
-
-                <h3>
-                    Accounting that gives you clarity.
-                </h3>
-
                 <div
-                    class="service-detail-rule"
-                    aria-hidden="true"
-                ></div>
+                  class="service-detail-face service-detail-back"
+                  id="accounting-service-back"
+                  data-flip-back
+                  aria-hidden="true"
+                  inert
+                >
+                  <p class="service-detail-back-eyebrow">Why it matters</p>
 
-                <div class="service-detail-back-copy">
+                  <h3>Accounting that gives you clarity.</h3>
 
+                  <div class="service-detail-rule" aria-hidden="true"></div>
+
+                  <div class="service-detail-back-copy">
                     <p>
-                        Accurate, current financial records give you
-                        a reliable view of where your business stands —
-                        not only at year-end, but throughout the year.
+                      Accurate, current financial records give you a reliable
+                      view of where your business stands — not only at year-end,
+                      but throughout the year.
                     </p>
 
                     <p>
-                        From day-to-day bookkeeping and management
-                        accounts to financial statements, budgeting
-                        and cash-flow support, we turn financial
-                        information into something you can use to
-                        plan, decide and grow with confidence.
+                      From day-to-day bookkeeping and management accounts to
+                      financial statements, budgeting and cash-flow support, we
+                      turn financial information into something you can use to
+                      plan, decide and grow with confidence.
                     </p>
+                  </div>
 
-                </div>
-
-                <button
+                  <button
                     type="button"
                     class="service-flip-back"
                     data-flip-close
-                >
+                  >
                     <span aria-hidden="true">←</span>
                     <span>Back to services</span>
-                </button>
-
+                  </button>
+                </div>
+              </div>
             </div>
+          </article>
 
-        </div>
-
-    </div>
-
-</article>
-
-
-        <!-- Audit & Tax — Flip Card -->
-<article
-    class="service-detail-column service-detail-column--flip"
-    id="audit-tax"
-    data-service-flip
-    data-reveal
-    data-reveal-delay="1"
->
-
-    <div class="service-flip-shell">
-
-        <div class="service-flip-inner">
-
-
-            <!-- =============================================
+          <!-- Audit & Tax — Flip Card -->
+          <article
+            class="service-detail-column service-detail-column--flip"
+            id="audit-tax"
+            data-service-flip
+            data-reveal
+            data-reveal-delay="1"
+          >
+            <div class="service-flip-shell">
+              <div class="service-flip-inner">
+                <!-- =============================================
                  FRONT
             ============================================== -->
 
-            <div
-                class="service-detail-face service-detail-front"
-                data-flip-front
-                aria-hidden="false"
-            >
-
                 <div
-    class="service-detail-icon"
-    data-icon-motion
+                  class="service-detail-face service-detail-front"
+                  data-flip-front
+                  aria-hidden="false"
                 >
-                    <img
-                        src="assets/icons/tax-services.svg"
-                        alt=""
-                    >
-                </div>
+                  <div class="service-detail-icon" data-icon-motion>
+                    <img src="assets/icons/tax-services.svg" alt="" />
+                  </div>
 
-                <p class="service-detail-label">
-                    Audit &amp; Tax
-                </p>
+                  <p class="service-detail-label">Audit &amp; Tax</p>
 
-                <h3>
-                    Assurance today. Confidence always.
-                </h3>
+                  <h3>Assurance today. Confidence always.</h3>
 
-                <div
-                    class="service-detail-rule"
-                    aria-hidden="true"
-                ></div>
+                  <div class="service-detail-rule" aria-hidden="true"></div>
 
-                <ul>
+                  <ul>
                     <li>Statutory Audit</li>
                     <li>Independent Reviews</li>
                     <li>Tax Planning</li>
                     <li>Tax Compliance</li>
                     <li>Tax Advisory</li>
-                </ul>
+                  </ul>
 
-                <button
+                  <button
                     type="button"
                     class="service-detail-link service-flip-trigger"
                     data-flip-open
                     aria-expanded="false"
                     aria-controls="audit-tax-service-back"
-                >
+                  >
                     <span>Find out more</span>
                     <span aria-hidden="true">→</span>
-                </button>
+                  </button>
+                </div>
 
-            </div>
-
-
-            <!-- =============================================
+                <!-- =============================================
                  BACK
             ============================================== -->
 
-            <div
-                class="service-detail-face service-detail-back"
-                id="audit-tax-service-back"
-                data-flip-back
-                aria-hidden="true"
-                inert
-            >
-
-                <p class="service-detail-back-eyebrow">
-                    Why it matters
-                </p>
-
-                <h3>
-                    Compliance without uncertainty.
-                </h3>
-
                 <div
-                    class="service-detail-rule"
-                    aria-hidden="true"
-                ></div>
+                  class="service-detail-face service-detail-back"
+                  id="audit-tax-service-back"
+                  data-flip-back
+                  aria-hidden="true"
+                  inert
+                >
+                  <p class="service-detail-back-eyebrow">Why it matters</p>
 
-                <div class="service-detail-back-copy">
+                  <h3>Compliance without uncertainty.</h3>
 
+                  <div class="service-detail-rule" aria-hidden="true"></div>
+
+                  <div class="service-detail-back-copy">
                     <p>
-                        Strong assurance and reliable tax compliance
-                        give you confidence that your obligations are
-                        being handled accurately, professionally and
-                        at the right time.
+                      Strong assurance and reliable tax compliance give you
+                      confidence that your obligations are being handled
+                      accurately, professionally and at the right time.
                     </p>
 
                     <p>
-                        From statutory audits and independent reviews
-                        to tax planning, compliance and advisory, we
-                        help you reduce avoidable risk while making
-                        informed decisions with greater certainty.
+                      From statutory audits and independent reviews to tax
+                      planning, compliance and advisory, we help you reduce
+                      avoidable risk while making informed decisions with
+                      greater certainty.
                     </p>
+                  </div>
 
-                </div>
-
-                <button
+                  <button
                     type="button"
                     class="service-flip-back"
                     data-flip-close
-                >
+                  >
                     <span aria-hidden="true">←</span>
                     <span>Back to services</span>
-                </button>
-
+                  </button>
+                </div>
+              </div>
             </div>
+          </article>
 
-        </div>
-
-    </div>
-
-</article>
-
-
-       <!-- Payroll — Flip Card -->
-<article
-    class="service-detail-column service-detail-column--flip"
-    id="payroll"
-    data-service-flip
-    data-reveal
-    data-reveal-delay="2"
->
-
-    <div class="service-flip-shell">
-
-        <div class="service-flip-inner">
-
-
-            <!-- =============================================
+          <!-- Payroll — Flip Card -->
+          <article
+            class="service-detail-column service-detail-column--flip"
+            id="payroll"
+            data-service-flip
+            data-reveal
+            data-reveal-delay="2"
+          >
+            <div class="service-flip-shell">
+              <div class="service-flip-inner">
+                <!-- =============================================
                  FRONT
             ============================================== -->
 
-            <div
-                class="service-detail-face service-detail-front"
-                data-flip-front
-                aria-hidden="false"
-            >
-
                 <div
-    class="service-detail-icon"
-    data-icon-motion
+                  class="service-detail-face service-detail-front"
+                  data-flip-front
+                  aria-hidden="false"
                 >
-                    <img
-                        src="assets/icons/payroll-services.svg"
-                        alt=""
-                    >
-                </div>
+                  <div class="service-detail-icon" data-icon-motion>
+                    <img src="assets/icons/payroll-services.svg" alt="" />
+                  </div>
 
-                <p class="service-detail-label">
-                    Payroll
-                </p>
+                  <p class="service-detail-label">Payroll</p>
 
-                <h3>
-                    People first. Processes right.
-                </h3>
+                  <h3>People first. Processes right.</h3>
 
-                <div
-                    class="service-detail-rule"
-                    aria-hidden="true"
-                ></div>
+                  <div class="service-detail-rule" aria-hidden="true"></div>
 
-                <ul>
+                  <ul>
                     <li>Payroll Processing</li>
                     <li>SARS Submissions</li>
                     <li>EMP201 &amp; IRP5</li>
                     <li>UIF &amp; SDL Management</li>
                     <li>Payroll Reporting</li>
-                </ul>
+                  </ul>
 
-                <button
+                  <button
                     type="button"
                     class="service-detail-link service-flip-trigger"
                     data-flip-open
                     aria-expanded="false"
                     aria-controls="payroll-service-back"
-                >
+                  >
                     <span>Find out more</span>
                     <span aria-hidden="true">→</span>
-                </button>
+                  </button>
+                </div>
 
-            </div>
-
-
-            <!-- =============================================
+                <!-- =============================================
                  BACK
             ============================================== -->
 
-            <div
-                class="service-detail-face service-detail-back"
-                id="payroll-service-back"
-                data-flip-back
-                aria-hidden="true"
-                inert
-            >
-
-                <p class="service-detail-back-eyebrow">
-                    Why it matters
-                </p>
-
-                <h3>
-                    Payroll that takes care of people.
-                </h3>
-
                 <div
-                    class="service-detail-rule"
-                    aria-hidden="true"
-                ></div>
+                  class="service-detail-face service-detail-back"
+                  id="payroll-service-back"
+                  data-flip-back
+                  aria-hidden="true"
+                  inert
+                >
+                  <p class="service-detail-back-eyebrow">Why it matters</p>
 
-                <div class="service-detail-back-copy">
+                  <h3>Payroll that takes care of people.</h3>
 
+                  <div class="service-detail-rule" aria-hidden="true"></div>
+
+                  <div class="service-detail-back-copy">
                     <p>
-                        Accurate and dependable payroll protects more
-                        than your compliance obligations — it supports
-                        the trust your employees place in your
-                        business every month.
+                      Accurate and dependable payroll protects more than your
+                      compliance obligations — it supports the trust your
+                      employees place in your business every month.
                     </p>
 
                     <p>
-                        We manage payroll processing, SARS submissions,
-                        EMP201s, IRP5s, UIF, SDL and reporting so your
-                        people are paid correctly and your statutory
-                        responsibilities stay under control.
+                      We manage payroll processing, SARS submissions, EMP201s,
+                      IRP5s, UIF, SDL and reporting so your people are paid
+                      correctly and your statutory responsibilities stay under
+                      control.
                     </p>
+                  </div>
 
-                </div>
-
-                <button
+                  <button
                     type="button"
                     class="service-flip-back"
                     data-flip-close
-                >
+                  >
                     <span aria-hidden="true">←</span>
                     <span>Back to services</span>
-                </button>
-
+                  </button>
+                </div>
+              </div>
             </div>
+          </article>
 
-        </div>
-
-    </div>
-
-</article>
-
-
-       <!-- Business Advisory — Flip Card -->
-<article
-    class="service-detail-column service-detail-column--flip"
-    id="business-advisory"
-    data-service-flip
-    data-reveal
-    data-reveal-delay="3"
->
-
-    <div class="service-flip-shell">
-
-        <div class="service-flip-inner">
-
-
-            <!-- =============================================
+          <!-- Business Advisory — Flip Card -->
+          <article
+            class="service-detail-column service-detail-column--flip"
+            id="business-advisory"
+            data-service-flip
+            data-reveal
+            data-reveal-delay="3"
+          >
+            <div class="service-flip-shell">
+              <div class="service-flip-inner">
+                <!-- =============================================
                  FRONT
             ============================================== -->
 
-            <div
-                class="service-detail-face service-detail-front"
-                data-flip-front
-                aria-hidden="false"
-            >
-
                 <div
-    class="service-detail-icon"
-    data-icon-motion
+                  class="service-detail-face service-detail-front"
+                  data-flip-front
+                  aria-hidden="false"
                 >
-                    <img
-                        src="assets/icons/business-advisory.svg"
-                        alt=""
-                    >
-                </div>
+                  <div class="service-detail-icon" data-icon-motion>
+                    <img src="assets/icons/business-advisory.svg" alt="" />
+                  </div>
 
-                <p class="service-detail-label">
-                    Business Advisory
-                </p>
+                  <p class="service-detail-label">Business Advisory</p>
 
-                <h3>
-                    Insight that informs. Advice that grows.
-                </h3>
+                  <h3>Insight that informs. Advice that grows.</h3>
 
-                <div
-                    class="service-detail-rule"
-                    aria-hidden="true"
-                ></div>
+                  <div class="service-detail-rule" aria-hidden="true"></div>
 
-                <ul>
+                  <ul>
                     <li>Business Strategy</li>
                     <li>Financial Planning</li>
                     <li>Performance Analysis</li>
                     <li>Risk Management</li>
                     <li>Growth Advisory</li>
-                </ul>
+                  </ul>
 
-                <button
+                  <button
                     type="button"
                     class="service-detail-link service-flip-trigger"
                     data-flip-open
                     aria-expanded="false"
                     aria-controls="business-advisory-service-back"
-                >
+                  >
                     <span>Find out more</span>
                     <span aria-hidden="true">→</span>
-                </button>
+                  </button>
+                </div>
 
-            </div>
-
-
-            <!-- =============================================
+                <!-- =============================================
                  BACK
             ============================================== -->
 
-            <div
-                class="service-detail-face service-detail-back"
-                id="business-advisory-service-back"
-                data-flip-back
-                aria-hidden="true"
-                inert
-            >
-
-                <p class="service-detail-back-eyebrow">
-                    Why it matters
-                </p>
-
-                <h3>
-                    Advice that turns insight into action.
-                </h3>
-
                 <div
-                    class="service-detail-rule"
-                    aria-hidden="true"
-                ></div>
+                  class="service-detail-face service-detail-back"
+                  id="business-advisory-service-back"
+                  data-flip-back
+                  aria-hidden="true"
+                  inert
+                >
+                  <p class="service-detail-back-eyebrow">Why it matters</p>
 
-                <div class="service-detail-back-copy">
+                  <h3>Advice that turns insight into action.</h3>
 
+                  <div class="service-detail-rule" aria-hidden="true"></div>
+
+                  <div class="service-detail-back-copy">
                     <p>
-                        Good decisions start with understanding what
-                        your numbers, performance and risks are telling
-                        you about where the business stands and where
-                        it can go next.
+                      Good decisions start with understanding what your numbers,
+                      performance and risks are telling you about where the
+                      business stands and where it can go next.
                     </p>
 
                     <p>
-                        Through strategy, financial planning,
-                        performance analysis and growth advisory,
-                        we help turn insight into practical action
-                        so you can move forward with greater
-                        confidence.
+                      Through strategy, financial planning, performance analysis
+                      and growth advisory, we help turn insight into practical
+                      action so you can move forward with greater confidence.
                     </p>
+                  </div>
 
-                </div>
-
-                <button
+                  <button
                     type="button"
                     class="service-flip-back"
                     data-flip-close
-                >
+                  >
                     <span aria-hidden="true">←</span>
                     <span>Back to services</span>
-                </button>
-
+                  </button>
+                </div>
+              </div>
             </div>
-
+          </article>
         </div>
+      </section>
 
-    </div>
-
-</article>
-
-</div>
-
-</section>
-
-<!-- =====================================================
+      <!-- =====================================================
      SERVICES — CLOSING CTA
 ====================================================== -->
 
-<section class="services-closing">
-
-   <div
-    class="services-closing-inner"
-    data-reveal
-    >
-
-        <div class="services-closing-message">
-
+      <section class="services-closing">
+        <div class="services-closing-inner" data-reveal>
+          <div class="services-closing-message">
             <div
-    class="services-closing-icon"
-    data-icon-motion
-    aria-hidden="true"
+              class="services-closing-icon"
+              data-icon-motion
+              aria-hidden="true"
             >
-                <svg
-                    viewBox="0 0 64 64"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M12 14H52C55.314 14 58 16.686 58 20V42C58 45.314 55.314 48 52 48H30L18 56V48H12C8.686 48 6 45.314 6 42V20C6 16.686 8.686 14 12 14Z"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linejoin="round"
-                    />
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 14H52C55.314 14 58 16.686 58 20V42C58 45.314 55.314 48 52 48H30L18 56V48H12C8.686 48 6 45.314 6 42V20C6 16.686 8.686 14 12 14Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
 
-                    <circle cx="22" cy="31" r="2" fill="currentColor"/>
-                    <circle cx="32" cy="31" r="2" fill="currentColor"/>
-                    <circle cx="42" cy="31" r="2" fill="currentColor"/>
-                </svg>
+                <circle cx="22" cy="31" r="2" fill="currentColor" />
+                <circle cx="32" cy="31" r="2" fill="currentColor" />
+                <circle cx="42" cy="31" r="2" fill="currentColor" />
+              </svg>
             </div>
 
             <div class="services-closing-copy">
+              <h2>Let’s support your next move.</h2>
 
-                <h2>
-                    Let’s support your next move.
-                </h2>
-
-                <p>
-                    Talk to us about how our services can add
-                    value to your business.
-                </p>
-
+              <p>
+                Talk to us about how our services can add value to your
+                business.
+              </p>
             </div>
+          </div>
 
-        </div>
+          <div class="services-closing-divider" aria-hidden="true"></div>
 
-
-        <div
-            class="services-closing-divider"
-            aria-hidden="true"
-        ></div>
-
-
-        <div class="services-closing-action">
-
-            <a
-                href="contact.html"
-                class="services-closing-button"
-            >
-                <span>Contact Us</span>
-                <span aria-hidden="true">→</span>
+          <div class="services-closing-action">
+            <a href="contact.html" class="services-closing-button">
+              <span>Contact Us</span>
+              <span aria-hidden="true">→</span>
             </a>
-
+          </div>
         </div>
-
-    </div>
-
-</section>
-
+      </section>
     </main>
 
- <!-- =====================================================
+    <!-- =====================================================
          FOOTER
     ====================================================== -->
 
     <footer class="site-footer">
-
-        <div class="container footer-inner">
-
-            <div class="footer-copyright">
-                <p>
-                    &copy;
-                    <span id="current-year"></span>
-                    Mambodla Professional Accountants
-                </p>
-            </div>
-
-
-            <div class="footer-legal">
-                <a href="#">
-                    Privacy Policy
-                </a>
-
-                <a href="#">
-                    Terms &amp; Conditions
-                </a>
-            </div>
-
-
-            <div
-                class="footer-social"
-                aria-label="Social media links"
-            >
-
-                <a
-                    href="https://www.facebook.com/share/p/1GCcvotiUQ/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Mambodla on Facebook"
-                >
-                    <img
-                        src="assets/social/facebook.svg"
-                        alt=""
-                    >
-                </a>
-
-
-                <a
-                    href="https://x.com/MambodlaA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Mambodla on X"
-                >
-                    <img
-                        src="assets/social/x.svg"
-                        alt=""
-                    >
-                </a>
-
-
-                <a
-                    href="https://www.linkedin.com/company/mambodla-professional-accountants/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Mambodla on LinkedIn"
-                >
-                    <img
-                        src="assets/social/linkedin.svg"
-                        alt=""
-                    >
-                </a>
-
-
-                <a
-                    href="https://wa.me/27670776562"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Contact Mambodla on WhatsApp"
-                >
-                    <img
-                        src="assets/social/whatsapp.svg"
-                        alt=""
-                    >
-                </a>
-
-            </div>
-
+      <div class="container footer-inner">
+        <div class="footer-copyright">
+          <p>
+            &copy;
+            <span id="current-year"></span>
+            Mambodla Professional Accountants
+          </p>
         </div>
 
+        <div class="footer-legal">
+          <a href="#"> Privacy Policy </a>
+
+          <a href="#"> Terms &amp; Conditions </a>
+        </div>
+
+        <div class="footer-social" aria-label="Social media links">
+          <a
+            href="https://www.facebook.com/share/p/1GCcvotiUQ/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on Facebook"
+          >
+            <img src="assets/social/facebook.svg" alt="" />
+          </a>
+
+          <a
+            href="https://x.com/MambodlaA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on X"
+          >
+            <img src="assets/social/x.svg" alt="" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/mambodla-professional-accountants/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on LinkedIn"
+          >
+            <img src="assets/social/linkedin.svg" alt="" />
+          </a>
+
+          <a
+            href="https://wa.me/27670776562"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact Mambodla on WhatsApp"
+          >
+            <img src="assets/social/whatsapp.svg" alt="" />
+          </a>
+        </div>
+      </div>
     </footer>
 
-
     <script src="js/main.js"></script>
-
-</body>
+  </body>
 </html>

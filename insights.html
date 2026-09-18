@@ -1,417 +1,289 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-ZA">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
-        name="description"
-        content="Learn more about Mambodla Professional Accountants, our values, purpose and commitment to our clients."
-    >
+      name="description"
+      content="Learn more about Mambodla Professional Accountants, our values, purpose and commitment to our clients."
+    />
 
     <title>Insights | Mambodla Professional Accountants</title>
 
     <style>
-        @view-transition {
-            navigation: auto;
-        }
+      @view-transition {
+        navigation: auto;
+      }
     </style>
 
-    <link
-    rel="stylesheet"
-    href="css/style.css"
->
+    <link rel="stylesheet" href="css/style.css" />
 
-<script src="js/transition-nav.js"></script>
-<script src="js/insight-transitions.js"></script>
+    <script src="js/transition-nav.js"></script>
+    <script src="js/insight-transitions.js"></script>
 
-<link
-    rel="expect"
-    href="#page-lead"
-    blocking="render"
->
+    <link rel="expect" href="#page-lead" blocking="render" />
+  </head>
 
-</head>
-
-<body class="insights-page-body">
-
+  <body class="insights-page-body">
     <!-- =====================================================
          HEADER
     ====================================================== -->
 
     <header class="site-header">
+      <div class="container header-inner">
+        <a
+          href="index.html"
+          class="brand"
+          aria-label="Mambodla Professional Accountants home"
+        >
+          <img
+            src="assets/logo/mambodla-logo.svg"
+            alt="Mambodla Professional Accountants"
+            class="brand-logo"
+          />
+        </a>
 
-        <div class="container header-inner">
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link"> Home </a>
 
-            <a
-                href="index.html"
-                class="brand"
-                aria-label="Mambodla Professional Accountants home"
-            >
-                <img
-                    src="assets/logo/mambodla-logo.svg"
-                    alt="Mambodla Professional Accountants"
-                    class="brand-logo"
-                >
-            </a>
+          <a href="about.html" class="nav-link"> About </a>
 
+          <a href="services.html" class="nav-link"> Services </a>
 
-            <nav
-                class="desktop-nav"
-                aria-label="Primary navigation"
-            >
-                <a href="index.html" class="nav-link">
-                    Home
-                </a>
+          <a href="insights.html" class="nav-link active" aria-current="page">
+            Insights
+          </a>
 
-                <a
-                    href="about.html" class="nav-link">
-                    About
-                </a>
+          <a href="contact.html" class="nav-link"> Contact </a>
+        </nav>
 
-                <a href="services.html" class="nav-link">
-                    Services
-                </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
-                <a href="insights.html" 
-                    class="nav-link active"
-                    aria-current="page"
-                >
-                    Insights
-                </a>
-
-                <a href="contact.html" class="nav-link">
-                    Contact
-                </a>
-            </nav>
-
-
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Open navigation"
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-        </div>
-
-
-        <!-- =================================================
+      <!-- =================================================
              MOBILE NAVIGATION
         ================================================== -->
 
-        <nav
-            class="mobile-nav"
-            id="mobile-menu"
-            aria-label="Mobile navigation"
-        >
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation">
+        <div class="mobile-nav-panel">
+          <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link"> Home </a>
 
-            <div class="mobile-nav-panel">
+            <a href="about.html" class="mobile-nav-link"> About </a>
 
-                <div class="mobile-nav-links">
+            <a href="services.html" class="mobile-nav-link"> Services </a>
 
-                    <a
-                        href="index.html"
-                        class="mobile-nav-link"
-                    >
-                        Home
-                    </a>
+            <a
+              href="insights.html"
+              class="mobile-nav-link active"
+              aria-current="page"
+            >
+              Insights
+            </a>
 
-                    <a
-                        href="about.html"
-                        class="mobile-nav-link"
-                    >
-                        About
-                    </a>
+            <a href="contact.html" class="mobile-nav-link"> Contact </a>
+          </div>
 
-                    <a
-                        href="services.html"
-                        class="mobile-nav-link"
-                    >
-                        Services
-                    </a>
+          <div class="mobile-nav-social">
+            <p>Connect with us</p>
 
-                    <a
-    href="insights.html"
-    class="mobile-nav-link active"
-    aria-current="page"
->
-    Insights
-</a>
+            <div class="mobile-nav-social-links">
+              <a
+                href="https://www.facebook.com/share/p/1GCcvotiUQ/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on Facebook"
+              >
+                <img src="assets/social/facebook.svg" alt="" />
+              </a>
 
-                    <a
-                        href="contact.html"
-                        class="mobile-nav-link"
-                    >
-                        Contact
-                    </a>
+              <a
+                href="https://x.com/MambodlaA"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on X"
+              >
+                <img src="assets/social/x.svg" alt="" />
+              </a>
 
-                </div>
+              <a
+                href="https://www.linkedin.com/company/mambodla-professional-accountants/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on LinkedIn"
+              >
+                <img src="assets/social/linkedin.svg" alt="" />
+              </a>
 
-
-                <div class="mobile-nav-social">
-
-                    <p>Connect with us</p>
-
-                    <div class="mobile-nav-social-links">
-
-                        <a
-                            href="https://www.facebook.com/share/p/1GCcvotiUQ/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on Facebook"
-                        >
-                            <img
-                                src="assets/social/facebook.svg"
-                                alt=""
-                            >
-                        </a>
-
-                        <a
-                            href="https://x.com/MambodlaA"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on X"
-                        >
-                            <img
-                                src="assets/social/x.svg"
-                                alt=""
-                            >
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/company/mambodla-professional-accountants/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on LinkedIn"
-                        >
-                            <img
-                                src="assets/social/linkedin.svg"
-                                alt=""
-                            >
-                        </a>
-
-                        <a
-                            href="https://wa.me/27670776562"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on WhatsApp"
-                        >
-                            <img
-                                src="assets/social/whatsapp.svg"
-                                alt=""
-                            >
-                        </a>
-
-                    </div>
-
-                </div>
-
+              <a
+                href="https://wa.me/27670776562"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on WhatsApp"
+              >
+                <img src="assets/social/whatsapp.svg" alt="" />
+              </a>
             </div>
-
-        </nav>
-
+          </div>
+        </div>
+      </nav>
     </header>
 
-
-<!-- =====================================================
+    <!-- =====================================================
      INSIGHTS PAGE
 ====================================================== -->
 
-<main class="insights-page">
-
-    <!-- =================================================
+    <main class="insights-page">
+      <!-- =================================================
          INSIGHTS — HERO
     ================================================== -->
 
-    <section
+      <section
         class="insights-hero"
         id="page-lead"
         aria-labelledby="insights-hero-title"
-    >
-
+      >
         <!-- Hero image -->
-        <div
-            class="insights-hero-visual"
-            aria-hidden="true"
-        >
-            <img
-                src="assets/images/insights/insights-hero.png"
-                alt=""
-                class="insights-hero-image"
-            >
+        <div class="insights-hero-visual" aria-hidden="true">
+          <img
+            src="assets/images/insights/insights-hero.png"
+            alt=""
+            class="insights-hero-image"
+          />
         </div>
-
 
         <!-- Hero content -->
         <div class="insights-hero-content">
+          <p class="insights-hero-eyebrow">Insights</p>
 
-            <p class="insights-hero-eyebrow">
-                Insights
-            </p>
+          <h1 id="insights-hero-title" class="insights-hero-title">
+            <span>Ideas, knowledge</span>
+            <span>and perspectives</span>
+            <span class="gold-text">that move business</span>
+            <span class="gold-text">forward.</span>
+          </h1>
 
-            <h1
-                id="insights-hero-title"
-                class="insights-hero-title"
-            >
-                <span>Ideas, knowledge</span>
-                <span>and perspectives</span>
-                <span class="gold-text">that move business</span>
-                <span class="gold-text">forward.</span>
-            </h1>
+          <div class="insights-hero-rule" aria-hidden="true"></div>
 
-            <div
-                class="insights-hero-rule"
-                aria-hidden="true"
-            ></div>
-
-            <p class="insights-hero-description">
-                Practical insights, expert analysis and real
-                conversations to help you make informed decisions
-                and build a stronger, more resilient business.
-            </p>
-
+          <p class="insights-hero-description">
+            Practical insights, expert analysis and real conversations to help
+            you make informed decisions and build a stronger, more resilient
+            business.
+          </p>
         </div>
-
 
         <!-- Right-side gold accent -->
-        <div
-            class="insights-hero-accent"
-            aria-hidden="true"
-        >
-            <span></span>
+        <div class="insights-hero-accent" aria-hidden="true">
+          <span></span>
         </div>
+      </section>
 
-    </section>
-
-    <!-- =====================================================
+      <!-- =====================================================
      INSIGHTS — FEATURED INSIGHT
 ====================================================== -->
 
-<section class="featured-insight">
+      <section class="featured-insight">
+        <p class="featured-insight-eyebrow" data-reveal="fade">
+          Featured Insight
+        </p>
 
-    <p
-    class="featured-insight-eyebrow"
-    data-reveal="fade"
->
-    Featured Insight
-</p>
+        <div class="featured-insight-card">
+          <a
+            href="insights/building-a-resilient-business.html#article-image"
+            class="featured-insight-image-wrap"
+            data-reveal="fade"
+          >
+            <img
+              src="assets/images/insights/insights-bridge.png"
+              alt="Modern bridge at sunset"
+              class="featured-insight-image insight-shared-image-resilience"
+            />
+          </a>
 
-    <div class="featured-insight-card">
-
-<a
-    href="insights/building-a-resilient-business.html#article-image"
-    class="featured-insight-image-wrap"
-    data-reveal="fade"
->
-    <img
-        src="assets/images/insights/insights-bridge.png"
-        alt="Modern bridge at sunset"
-        class="
-            featured-insight-image
-            insight-shared-image-resilience
-        "
-    >
-</a>
-
-        <div
+          <div
             class="featured-insight-content"
             data-reveal
             data-reveal-delay="1"
-        >
+          >
+            <p class="featured-insight-category">Business Strategy</p>
 
-            <p class="featured-insight-category">
-                Business Strategy
-            </p>
+            <h2>Building a resilient business in uncertain times</h2>
 
-            <h2>
-                Building a resilient business
-                in uncertain times
-            </h2>
-
-            <div
-                class="featured-insight-rule"
-                aria-hidden="true"
-            ></div>
+            <div class="featured-insight-rule" aria-hidden="true"></div>
 
             <p class="featured-insight-description">
-                Resilience isn’t about avoiding challenges.
-                It’s about building the right systems, making
-                informed decisions and staying focused on what
-                truly drives value.
+              Resilience isn’t about avoiding challenges. It’s about building
+              the right systems, making informed decisions and staying focused
+              on what truly drives value.
             </p>
 
             <div class="featured-insight-footer">
+              <div class="featured-insight-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+                    <path d="M8 3v4M16 3v4M4 9h16"></path>
+                  </svg>
+                  08 May 2025
+                </span>
 
-                <div class="featured-insight-meta">
+                <span class="meta-divider"></span>
 
-                    <span>
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <rect x="4" y="5" width="16" height="15" rx="2"></rect>
-                            <path d="M8 3v4M16 3v4M4 9h16"></path>
-                        </svg>
-                        08 May 2025
-                    </span>
+                <span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="8"></circle>
+                    <path d="M12 7v5l3 2"></path>
+                  </svg>
+                  6 min read
+                </span>
+              </div>
 
-                    <span class="meta-divider"></span>
-
-                    <span>
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <circle cx="12" cy="12" r="8"></circle>
-                            <path d="M12 7v5l3 2"></path>
-                        </svg>
-                        6 min read
-                    </span>
-
-                </div>
-
-                <a 
-                href="insights/building-a-resilient-business.html" 
+              <a
+                href="insights/building-a-resilient-business.html"
                 class="featured-insight-link"
-                >
-                    <span>Read more</span>
-                    <span aria-hidden="true">→</span>
-                </a>
-
+              >
+                <span>Read more</span>
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
-
+          </div>
         </div>
+      </section>
 
-    </div>
-
-</section>
-
-<!-- =====================================================
+      <!-- =====================================================
      INSIGHTS — CATEGORY CARDS
 ====================================================== -->
 
-<section class="insights-categories">
-
-    <div class="insights-categories-grid">
-
-
-        <!-- Tax Updates -->
-        <article
+      <section class="insights-categories">
+        <div class="insights-categories-grid">
+          <!-- Tax Updates -->
+          <article
             class="insight-category-card"
+            data-insight-filter="tax-updates"
             data-reveal
             data-reveal-delay="0"
-        >
-
+          >
             <div
-                class="insight-category-icon"
-                aria-hidden="true"
-                data-icon-motion
+              class="insight-category-icon"
+              aria-hidden="true"
+              data-icon-motion
             >
-                <svg viewBox="0 0 64 64">
-                    <rect x="18" y="12" width="28" height="40" rx="2"></rect>
-                    <path d="M24 8h16v8H24z"></path>
-                    <path d="M24 25h16M24 32h16M24 39h10"></path>
-                </svg>
+              <svg viewBox="0 0 64 64">
+                <rect x="18" y="12" width="28" height="40" rx="2"></rect>
+                <path d="M24 8h16v8H24z"></path>
+                <path d="M24 25h16M24 32h16M24 39h10"></path>
+              </svg>
             </div>
 
             <h3>Tax Updates</h3>
@@ -419,37 +291,39 @@
             <div class="insight-category-rule" aria-hidden="true"></div>
 
             <p>
-                Stay up to date with the latest tax changes,
-                deadlines and compliance matters.
+              Stay up to date with the latest tax changes, deadlines and
+              compliance matters.
             </p>
 
-            <a href="#" class="insight-category-link">
-                <span>Explore</span>
-                <span aria-hidden="true">→</span>
-            </a>
-
-        </article>
-
-
-        <!-- Financial Tips -->
-        <article
-    class="insight-category-card"
-    data-reveal
-    data-reveal-delay="1"
-        >
-
-            <div
-    class="insight-category-icon"
-    aria-hidden="true"
-    data-icon-motion
+            <a
+              href="#latest-insights"
+              class="insight-category-link"
+              aria-pressed="false"
             >
-                <svg viewBox="0 0 64 64">
-                    <path d="M14 50V34h8v16"></path>
-                    <path d="M28 50V26h8v24"></path>
-                    <path d="M42 50V18h8v32"></path>
-                    <path d="M14 26l10-8 8 5 16-12"></path>
-                    <path d="M42 11h6v6"></path>
-                </svg>
+              <span>Explore</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Financial Tips -->
+          <article
+            class="insight-category-card"
+            data-insight-filter="financial-tips"
+            data-reveal
+            data-reveal-delay="1"
+          >
+            <div
+              class="insight-category-icon"
+              aria-hidden="true"
+              data-icon-motion
+            >
+              <svg viewBox="0 0 64 64">
+                <path d="M14 50V34h8v16"></path>
+                <path d="M28 50V26h8v24"></path>
+                <path d="M42 50V18h8v32"></path>
+                <path d="M14 26l10-8 8 5 16-12"></path>
+                <path d="M42 11h6v6"></path>
+              </svg>
             </div>
 
             <h3>Financial Tips</h3>
@@ -457,36 +331,38 @@
             <div class="insight-category-rule" aria-hidden="true"></div>
 
             <p>
-                Simple, practical tips to improve cash flow,
-                manage finances and grow wealth.
+              Simple, practical tips to improve cash flow, manage finances and
+              grow wealth.
             </p>
 
-            <a href="#" class="insight-category-link">
-                <span>Explore</span>
-                <span aria-hidden="true">→</span>
-            </a>
-
-        </article>
-
-
-        <!-- Business Advice -->
-        <article
-    class="insight-category-card"
-    data-reveal
-    data-reveal-delay="2"
-        >
-
-            <div
-    class="insight-category-icon"
-    aria-hidden="true"
-    data-icon-motion
+            <a
+              href="#latest-insights"
+              class="insight-category-link"
+              aria-pressed="false"
             >
-                <svg viewBox="0 0 64 64">
-                    <rect x="12" y="20" width="40" height="28" rx="3"></rect>
-                    <path d="M24 20v-6h16v6"></path>
-                    <path d="M12 31h40"></path>
-                    <path d="M28 28h8v6h-8z"></path>
-                </svg>
+              <span>Explore</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Business Advice -->
+          <article
+            class="insight-category-card"
+            data-insight-filter="business-advice"
+            data-reveal
+            data-reveal-delay="2"
+          >
+            <div
+              class="insight-category-icon"
+              aria-hidden="true"
+              data-icon-motion
+            >
+              <svg viewBox="0 0 64 64">
+                <rect x="12" y="20" width="40" height="28" rx="3"></rect>
+                <path d="M24 20v-6h16v6"></path>
+                <path d="M12 31h40"></path>
+                <path d="M28 28h8v6h-8z"></path>
+              </svg>
             </div>
 
             <h3>Business Advice</h3>
@@ -494,70 +370,73 @@
             <div class="insight-category-rule" aria-hidden="true"></div>
 
             <p>
-                Expert guidance on strategy, operations and
-                building sustainable businesses.
+              Expert guidance on strategy, operations and building sustainable
+              businesses.
             </p>
 
-            <a href="#" class="insight-category-link">
-                <span>Explore</span>
-                <span aria-hidden="true">→</span>
-            </a>
-
-        </article>
-
-
-        <!-- Mambodla Perspectives -->
-        <article
-    class="insight-category-card"
-    data-reveal
-    data-reveal-delay="3"
-        >
-
-            <div
-    class="insight-category-icon"
-    aria-hidden="true"
-    data-icon-motion
+            <a
+              href="#latest-insights"
+              class="insight-category-link"
+              aria-pressed="false"
             >
-                <svg viewBox="0 0 64 64">
-                    <path d="M12 20c0-6 6-10 13-10h14c7 0 13 4 13 10v12c0 6-6 10-13 10H28l-10 8v-8c-4-1-6-5-6-10z"></path>
-                </svg>
+              <span>Explore</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Mambodla Perspectives -->
+          <article
+            class="insight-category-card"
+            data-insight-filter="mambodla-perspectives"
+            data-reveal
+            data-reveal-delay="3"
+          >
+            <div
+              class="insight-category-icon"
+              aria-hidden="true"
+              data-icon-motion
+            >
+              <svg viewBox="0 0 64 64">
+                <path
+                  d="M12 20c0-6 6-10 13-10h14c7 0 13 4 13 10v12c0 6-6 10-13 10H28l-10 8v-8c-4-1-6-5-6-10z"
+                ></path>
+              </svg>
             </div>
 
             <h3>Mambodla Perspectives</h3>
 
             <div class="insight-category-rule" aria-hidden="true"></div>
 
-            <p>
-                Our thoughts on key issues shaping business
-                and the economy.
-            </p>
+            <p>Our thoughts on key issues shaping business and the economy.</p>
 
-            <a href="#" class="insight-category-link">
-                <span>Explore</span>
-                <span aria-hidden="true">→</span>
-            </a>
-
-        </article>
-
-
-        <!-- Community Voice -->
-        <article
-    class="insight-category-card"
-    data-reveal
-    data-reveal-delay="4"
-        >
-
-            <div
-    class="insight-category-icon"
-    aria-hidden="true"
-    data-icon-motion
+            <a
+              href="#latest-insights"
+              class="insight-category-link"
+              aria-pressed="false"
             >
-                <svg viewBox="0 0 64 64">
-                    <circle cx="24" cy="22" r="7"></circle>
-                    <circle cx="42" cy="24" r="6"></circle>
-                    <path d="M10 49c1-10 7-15 14-15s13 5 14 15"></path>
-                    <path d="M34 48c1-8 5-12 11-12 5 0 9 3 10 10"></path>
-                </svg>
+              <span>Explore</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Community Voice -->
+          <article
+            class="insight-category-card"
+            data-insight-filter="community-voice"
+            data-reveal
+            data-reveal-delay="4"
+          >
+            <div
+              class="insight-category-icon"
+              aria-hidden="true"
+              data-icon-motion
+            >
+              <svg viewBox="0 0 64 64">
+                <circle cx="24" cy="22" r="7"></circle>
+                <circle cx="42" cy="24" r="6"></circle>
+                <path d="M10 49c1-10 7-15 14-15s13 5 14 15"></path>
+                <path d="M34 48c1-8 5-12 11-12 5 0 9 3 10 10"></path>
+              </svg>
             </div>
 
             <h3>Community Voice</h3>
@@ -565,285 +444,342 @@
             <div class="insight-category-rule" aria-hidden="true"></div>
 
             <p>
-                Real conversations, shared experiences and
-                lessons from the business community.
+              Real conversations, shared experiences and lessons from the
+              business community.
             </p>
 
-            <a href="#" class="insight-category-link">
-                <span>Explore</span>
-                <span aria-hidden="true">→</span>
+            <a
+              href="#latest-insights"
+              class="insight-category-link"
+              aria-pressed="false"
+            >
+              <span>Explore</span>
+              <span aria-hidden="true">→</span>
             </a>
-
-        </article>
-
-
-    </div>
-
-</section>
+          </article>
+        </div>
+      </section>
 
 <!-- =====================================================
      INSIGHTS — LATEST INSIGHTS
 ====================================================== -->
 
-<section class="latest-insights">
+<section class="latest-insights" id="latest-insights">
+  <div class="latest-insights-header" data-reveal>
+    <div class="latest-insights-heading-group">
+      <p class="latest-insights-eyebrow">Latest Insights</p>
 
-    <div
-    class="latest-insights-header"
-    data-reveal
-    >
+      <p
+        class="latest-insights-active-filter"
+        data-insights-active-filter
+        aria-live="polite"
+        hidden
+      >
+        <span>Viewing:</span>
 
-        <p class="latest-insights-eyebrow">
-            Latest Insights
-        </p>
-
-        <a href="#" class="latest-insights-view-all">
-            <span>View all insights</span>
-            <span aria-hidden="true">→</span>
-        </a>
-
+        <strong data-insights-active-filter-name></strong>
+      </p>
     </div>
 
-
-    <div class="latest-insights-grid">
-
-
-<!-- Tax Updates -->
-
-<article
-    class="latest-insight-card"
-    data-reveal
-    data-reveal-delay="0"
->
-
     <a
+      href="#latest-insights"
+      class="latest-insights-view-all"
+      data-insights-view-all
+    >
+      <span>View all insights</span>
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
+
+  <div class="latest-insights-grid" data-insights-grid>
+    <!-- =================================================
+         TAX UPDATES
+    ================================================== -->
+
+    <article
+      class="latest-insight-card"
+      data-insight-category="tax-updates"
+      data-reveal
+      data-reveal-delay="0"
+    >
+      <a
         href="insights/understanding-2026-tax-changes.html"
         class="latest-insight-image-wrap"
-    >
-
+      >
         <img
-            src="assets/images/insights/insights-tax-updates.png"
-            alt="Calculator and financial documents"
-            class="latest-insight-image"
-        >
+          src="assets/images/insights/insights-tax-updates.png"
+          alt="Calculator and financial documents"
+          class="latest-insight-image"
+        />
+      </a>
 
-    </a>
-
-
-    <div class="latest-insight-content">
-
-        <p class="latest-insight-category">
-            Tax Updates
-        </p>
-
+      <div class="latest-insight-content">
+        <p class="latest-insight-category">Tax Updates</p>
 
         <h3>
-
-            <a
-                href="insights/understanding-2026-tax-changes.html"
-            >
-                Understanding the 2026 tax changes
-            </a>
-
+          <a href="insights/understanding-2026-tax-changes.html">
+            Understanding the 2026 tax changes
+          </a>
         </h3>
 
-
         <div class="latest-insight-meta">
+          <span>16 Sep 2026</span>
 
-            <span>
-                16 Sep 2026
-            </span>
+          <span class="latest-meta-dot"></span>
 
-            <span class="latest-meta-dot"></span>
-
-            <span>
-                4 min read
-            </span>
-
+          <span>4 min read</span>
         </div>
-
-    </div>
-
-</article>
-
-
-<!-- Financial Tips -->
-
-<article
-    class="latest-insight-card"
-    data-reveal
-    data-reveal-delay="1"
->
-
-    <a
-        href="insights/cash-flow-habits.html"
-        class="latest-insight-image-wrap"
-    >
-
-        <img
-            src="assets/images/insights/insights-financial-tips.png"
-            alt="Coins and plant representing financial growth"
-            class="latest-insight-image"
-        >
-
-    </a>
-
-
-    <div class="latest-insight-content">
-
-        <p class="latest-insight-category">
-            Financial Tips
-        </p>
-
-
-        <h3>
-
-            <a
-                href="insights/cash-flow-habits.html"
-            >
-                5 cash flow habits every business should master
-            </a>
-
-        </h3>
-
-
-        <div class="latest-insight-meta">
-
-            <span>
-                10 Sep 2026
-            </span>
-
-            <span class="latest-meta-dot"></span>
-
-            <span>
-                4 min read
-            </span>
-
-        </div>
-
-    </div>
-
-</article>
-
-
-<!-- Business Advice -->
-
-<article
-    class="latest-insight-card"
-    data-reveal
-    data-reveal-delay="2"
->
-
-    <a
-        href="insights/why-strategy-matters.html"
-        class="latest-insight-image-wrap"
-    >
-
-        <img
-            src="assets/images/insights/insights-business-advisory.png"
-            alt="Chess pieces representing business strategy"
-            class="latest-insight-image"
-        >
-
-    </a>
-
-
-    <div class="latest-insight-content">
-
-        <p class="latest-insight-category">
-            Business Advice
-        </p>
-
-
-        <h3>
-
-            <a
-                href="insights/why-strategy-matters.html"
-            >
-                Why strategy matters more than ever
-            </a>
-
-        </h3>
-
-
-        <div class="latest-insight-meta">
-
-            <span>
-                03 Sep 2026
-            </span>
-
-            <span class="latest-meta-dot"></span>
-
-            <span>
-                4 min read
-            </span>
-
-        </div>
-
-    </div>
-
-</article>
-
-
-<!-- Mambodla Perspectives -->
-
-<article
-    class="latest-insight-card"
-    data-reveal
-    data-reveal-delay="3"
->
-
-    <a
-        href="insights/human-side-of-business-success.html"
-        class="latest-insight-image-wrap"
-    >
-
-        <img
-            src="assets/images/insights/insights-notebook.png"
-            alt="Notebook and pen on a desk"
-            class="latest-insight-image"
-        >
-
-    </a>
-
-
-    <div class="latest-insight-content">
-
-        <p class="latest-insight-category">
-            Mambodla Perspectives
-        </p>
-
-
-        <h3>
-
-            <a
-                href="insights/human-side-of-business-success.html"
-            >
-                The human side of business success
-            </a>
-
-        </h3>
-
-
-        <div class="latest-insight-meta">
-
-            <span>
-                27 Aug 2026
-            </span>
-
-            <span class="latest-meta-dot"></span>
-
-            <span>
-                3 min read
-            </span>
-
-        </div>
-
-    </div>
-
+      </div>
     </article>
 
-</div>
+    <!-- =================================================
+         FINANCIAL TIPS
+    ================================================== -->
 
+    <article
+      class="latest-insight-card"
+      data-insight-category="financial-tips"
+      data-reveal
+      data-reveal-delay="1"
+    >
+      <a
+        href="insights/cash-flow-habits.html"
+        class="latest-insight-image-wrap"
+      >
+        <img
+          src="assets/images/insights/insights-financial-tips.png"
+          alt="Coins and plant representing financial growth"
+          class="latest-insight-image"
+        />
+      </a>
+
+      <div class="latest-insight-content">
+        <p class="latest-insight-category">Financial Tips</p>
+
+        <h3>
+          <a href="insights/cash-flow-habits.html">
+            5 cash flow habits every business should master
+          </a>
+        </h3>
+
+        <div class="latest-insight-meta">
+          <span>10 Sep 2026</span>
+
+          <span class="latest-meta-dot"></span>
+
+          <span>4 min read</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- =================================================
+         BUSINESS ADVICE
+    ================================================== -->
+
+    <article
+      class="latest-insight-card"
+      data-insight-category="business-advice"
+      data-reveal
+      data-reveal-delay="2"
+    >
+      <a
+        href="insights/why-strategy-matters.html"
+        class="latest-insight-image-wrap"
+      >
+        <img
+          src="assets/images/insights/insights-business-advisory.png"
+          alt="Chess pieces representing business strategy"
+          class="latest-insight-image"
+        />
+      </a>
+
+      <div class="latest-insight-content">
+        <p class="latest-insight-category">Business Advice</p>
+
+        <h3>
+          <a href="insights/why-strategy-matters.html">
+            Why strategy matters more than ever
+          </a>
+        </h3>
+
+        <div class="latest-insight-meta">
+          <span>03 Sep 2026</span>
+
+          <span class="latest-meta-dot"></span>
+
+          <span>4 min read</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- =================================================
+         MAMBODLA PERSPECTIVES
+    ================================================== -->
+
+    <article
+      class="latest-insight-card"
+      data-insight-category="mambodla-perspectives"
+      data-reveal
+      data-reveal-delay="3"
+    >
+      <a
+        href="insights/human-side-of-business-success.html"
+        class="latest-insight-image-wrap"
+      >
+        <img
+          src="assets/images/insights/insights-notebook.png"
+          alt="Notebook and pen on a desk"
+          class="latest-insight-image"
+        />
+      </a>
+
+      <div class="latest-insight-content">
+        <p class="latest-insight-category">Mambodla Perspectives</p>
+
+        <h3>
+          <a href="insights/human-side-of-business-success.html">
+            The human side of business success
+          </a>
+        </h3>
+
+        <div class="latest-insight-meta">
+          <span>27 Aug 2026</span>
+
+          <span class="latest-meta-dot"></span>
+
+          <span>3 min read</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- =================================================
+         FILTERED ARTICLE — TAX DESCRIPTION
+    ================================================== -->
+
+    <aside
+      class="latest-insight-detail"
+      data-insight-detail="tax-updates"
+      hidden
+    >
+      <p class="latest-insight-detail-eyebrow">Inside this insight</p>
+
+      <div class="latest-insight-detail-rule" aria-hidden="true"></div>
+
+      <p class="latest-insight-detail-copy">
+        South Africa’s 2026 tax changes introduce inflation-linked relief for
+        individuals and meaningful threshold changes for smaller businesses.
+        The important question is how those changes affect tax, payroll and
+        planning decisions.
+      </p>
+
+      <a
+        href="insights/understanding-2026-tax-changes.html"
+        class="latest-insight-detail-link"
+      >
+        <span>Read the full insight</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </aside>
+
+    <!-- =================================================
+         FILTERED ARTICLE — FINANCIAL DESCRIPTION
+    ================================================== -->
+
+    <aside
+      class="latest-insight-detail"
+      data-insight-detail="financial-tips"
+      hidden
+    >
+      <p class="latest-insight-detail-eyebrow">Inside this insight</p>
+
+      <div class="latest-insight-detail-rule" aria-hidden="true"></div>
+
+      <p class="latest-insight-detail-copy">
+        Healthy cash flow is not only about how much a business earns. It is
+        about when money arrives, when obligations fall due and whether
+        management can see pressure early enough to act.
+      </p>
+
+      <a
+        href="insights/cash-flow-habits.html"
+        class="latest-insight-detail-link"
+      >
+        <span>Read the full insight</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </aside>
+
+    <!-- =================================================
+         FILTERED ARTICLE — BUSINESS DESCRIPTION
+    ================================================== -->
+
+    <aside
+      class="latest-insight-detail"
+      data-insight-detail="business-advice"
+      hidden
+    >
+      <p class="latest-insight-detail-eyebrow">Inside this insight</p>
+
+      <div class="latest-insight-detail-rule" aria-hidden="true"></div>
+
+      <p class="latest-insight-detail-copy">
+        Strategy gives a business something more valuable than a plan: a clear
+        basis for choosing where to focus, what to protect and which
+        opportunities are worth pursuing.
+      </p>
+
+      <a
+        href="insights/why-strategy-matters.html"
+        class="latest-insight-detail-link"
+      >
+        <span>Read the full insight</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </aside>
+
+    <!-- =================================================
+         FILTERED ARTICLE — MAMBODLA DESCRIPTION
+    ================================================== -->
+
+    <aside
+      class="latest-insight-detail"
+      data-insight-detail="mambodla-perspectives"
+      hidden
+    >
+      <p class="latest-insight-detail-eyebrow">Inside this insight</p>
+
+      <div class="latest-insight-detail-rule" aria-hidden="true"></div>
+
+      <p class="latest-insight-detail-copy">
+        Strong systems, good numbers and clear strategies matter. But
+        businesses ultimately move through people — the people who make
+        decisions, serve customers and turn plans into everyday action.
+      </p>
+
+      <a
+        href="insights/human-side-of-business-success.html"
+        class="latest-insight-detail-link"
+      >
+        <span>Read the full insight</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </aside>
+
+    <!-- =================================================
+         EMPTY CATEGORY STATE
+    ================================================== -->
+
+    <div class="latest-insights-empty" data-insights-empty hidden>
+      <p class="latest-insights-empty-eyebrow">Community Voice</p>
+
+      <h3>New perspectives are on the way.</h3>
+
+      <p>
+        We’re preparing conversations, experiences and lessons from the
+        business community for this space.
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- =====================================================
@@ -851,178 +787,135 @@
 ====================================================== -->
 
 <section class="insights-contribution">
+  <div class="insights-contribution-inner" data-reveal>
+    <div class="insights-contribution-intro">
+      <div
+        class="insights-contribution-icon"
+        aria-hidden="true"
+        data-icon-motion
+      >
+        <svg viewBox="0 0 64 64">
+          <path
+            d="
+              M15 50
+              C20 38, 28 25, 47 12
+              C48 21, 44 31, 35 39
+              C29 44, 23 47, 15 50
+            "
+          ></path>
 
-    <div
-    class="insights-contribution-inner"
-    data-reveal
-    >
+          <path
+            d="
+              M18 47
+              C25 40, 32 33, 42 25
+            "
+          ></path>
 
-        <div class="insights-contribution-intro">
+          <path
+            d="
+              M29 35
+              L25 27
+            "
+          ></path>
 
-            <div
-    class="insights-contribution-icon"
-    aria-hidden="true"
-    data-icon-motion
-            >
+          <path
+            d="
+              M36 29
+              L34 21
+            "
+          ></path>
+        </svg>
+      </div>
 
-                <svg viewBox="0 0 64 64">
-                    <path d="
-                        M15 50
-                        C20 38, 28 25, 47 12
-                        C48 21, 44 31, 35 39
-                        C29 44, 23 47, 15 50
-                    "></path>
-
-                    <path d="
-                        M18 47
-                        C25 40, 32 33, 42 25
-                    "></path>
-
-                    <path d="
-                        M29 35
-                        L25 27
-                    "></path>
-
-                    <path d="
-                        M36 29
-                        L34 21
-                    "></path>
-                </svg>
-
-            </div>
-
-
-            <h2 class="insights-contribution-title">
-                <span>Share your insights.</span>
-                <span class="gold-text">Inspire others.</span>
-            </h2>
-
-        </div>
-
-
-        <div
-            class="insights-contribution-divider"
-            aria-hidden="true">
-        </div>
-
-
-        <div class="insights-contribution-content">
-
-            <p>
-                We believe great ideas come from real experiences.
-                Contribute your thoughts and be part of the conversation.
-            </p>
-
-            <a
-                href="#"
-                class="insights-contribution-button">
-
-                <span>Contribute an article</span>
-                <span aria-hidden="true">→</span>
-
-            </a>
-
-        </div>
-
+      <h2 class="insights-contribution-title">
+        <span>Share your insights.</span>
+        <span class="gold-text">Inspire others.</span>
+      </h2>
     </div>
 
+    <div
+      class="insights-contribution-divider"
+      aria-hidden="true"
+    ></div>
+
+    <div class="insights-contribution-content">
+      <p>
+        We believe great ideas come from real experiences.
+        Share your perspective and be part of the conversation.
+      </p>
+
+      <a
+        href="contact.html?enquiry=insight-contribution"
+        class="insights-contribution-button"
+      >
+        <span>Submit your article</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
 </section>
-
-</main>
-
+    </main>
 
     <!-- =====================================================
          FOOTER
     ====================================================== -->
 
     <footer class="site-footer">
-
-        <div class="container footer-inner">
-
-            <div class="footer-copyright">
-                <p>
-                    &copy;
-                    <span id="current-year"></span>
-                    Mambodla Professional Accountants
-                </p>
-            </div>
-
-
-            <div class="footer-legal">
-                <a href="#">
-                    Privacy Policy
-                </a>
-
-                <a href="#">
-                    Terms &amp; Conditions
-                </a>
-            </div>
-
-
-            <div
-                class="footer-social"
-                aria-label="Social media links"
-            >
-
-                <a
-                    href="https://www.facebook.com/share/p/1GCcvotiUQ/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Mambodla on Facebook"
-                >
-                    <img
-                        src="assets/social/facebook.svg"
-                        alt=""
-                    >
-                </a>
-
-
-                <a
-                    href="https://x.com/MambodlaA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Mambodla on X"
-                >
-                    <img
-                        src="assets/social/x.svg"
-                        alt=""
-                    >
-                </a>
-
-
-                <a
-                    href="https://www.linkedin.com/company/mambodla-professional-accountants/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Mambodla on LinkedIn"
-                >
-                    <img
-                        src="assets/social/linkedin.svg"
-                        alt=""
-                    >
-                </a>
-
-
-                <a
-                    href="https://wa.me/27670776562"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Contact Mambodla on WhatsApp"
-                >
-                    <img
-                        src="assets/social/whatsapp.svg"
-                        alt=""
-                    >
-                </a>
-
-            </div>
-
+      <div class="container footer-inner">
+        <div class="footer-copyright">
+          <p>
+            &copy;
+            <span id="current-year"></span>
+            Mambodla Professional Accountants
+          </p>
         </div>
 
+        <div class="footer-legal">
+          <a href="#"> Privacy Policy </a>
+
+          <a href="#"> Terms &amp; Conditions </a>
+        </div>
+
+        <div class="footer-social" aria-label="Social media links">
+          <a
+            href="https://www.facebook.com/share/p/1GCcvotiUQ/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on Facebook"
+          >
+            <img src="assets/social/facebook.svg" alt="" />
+          </a>
+
+          <a
+            href="https://x.com/MambodlaA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on X"
+          >
+            <img src="assets/social/x.svg" alt="" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/mambodla-professional-accountants/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on LinkedIn"
+          >
+            <img src="assets/social/linkedin.svg" alt="" />
+          </a>
+
+          <a
+            href="https://wa.me/27670776562"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact Mambodla on WhatsApp"
+          >
+            <img src="assets/social/whatsapp.svg" alt="" />
+          </a>
+        </div>
+      </div>
     </footer>
 
-
     <script src="js/main.js"></script>
-
-</body>
+  </body>
 </html>

@@ -1,1034 +1,630 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
-        name="description"
-        content="Explore why business strategy matters, how clear priorities improve decision-making and what leaders can do to turn direction into disciplined action."
-    >
+      name="description"
+      content="Explore why business strategy matters, how clear priorities improve decision-making and what leaders can do to turn direction into disciplined action."
+    />
 
     <title>
-        Why Strategy Matters More Than Ever |
-        Mambodla Professional Accountants
+      Why Strategy Matters More Than Ever | Mambodla Professional Accountants
     </title>
-
 
     <!-- =====================================================
          CROSS-DOCUMENT VIEW TRANSITIONS
     ====================================================== -->
 
     <style>
-
-        @view-transition {
-            navigation: auto;
-        }
-
+      @view-transition {
+        navigation: auto;
+      }
     </style>
-
 
     <!-- =====================================================
          GLOBAL STYLES
     ====================================================== -->
 
-    <link
-        rel="stylesheet"
-        href="../css/style.css"
-    >
+    <link rel="stylesheet" href="../css/style.css" />
 
     <script src="../js/transition-nav.js"></script>
     <script src="../js/insight-transitions.js"></script>
 
-    <link
-        rel="expect"
-        href="#page-lead"
-        blocking="render"
-    >
+    <link rel="expect" href="#page-lead" blocking="render" />
+  </head>
 
-</head>
-
-
-<body class="insight-article-page-body">
-
-
+  <body class="insight-article-page-body">
     <!-- =====================================================
          HEADER
     ====================================================== -->
 
     <header class="site-header">
+      <div class="container header-inner">
+        <!-- Brand -->
 
-        <div class="container header-inner">
+        <a
+          href="../index.html"
+          class="brand"
+          aria-label="Mambodla Professional Accountants home"
+        >
+          <img
+            src="../assets/logo/mambodla-logo.svg"
+            alt="Mambodla Professional Accountants"
+            class="brand-logo"
+          />
+        </a>
 
+        <!-- Desktop navigation -->
 
-            <!-- Brand -->
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="../index.html" class="nav-link"> Home </a>
 
-            <a
-                href="../index.html"
-                class="brand"
-                aria-label="Mambodla Professional Accountants home"
-            >
+          <a href="../about.html" class="nav-link"> About </a>
 
-                <img
-                    src="../assets/logo/mambodla-logo.svg"
-                    alt="Mambodla Professional Accountants"
-                    class="brand-logo"
-                >
+          <a href="../services.html" class="nav-link"> Services </a>
 
-            </a>
+          <a
+            href="../insights.html"
+            class="nav-link active"
+            aria-current="page"
+          >
+            Insights
+          </a>
 
+          <a href="../contact.html" class="nav-link"> Contact </a>
+        </nav>
 
-            <!-- Desktop navigation -->
+        <!-- Mobile toggle -->
 
-            <nav
-                class="desktop-nav"
-                aria-label="Primary navigation"
-            >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
-                <a
-                    href="../index.html"
-                    class="nav-link"
-                >
-                    Home
-                </a>
-
-                <a
-                    href="../about.html"
-                    class="nav-link"
-                >
-                    About
-                </a>
-
-                <a
-                    href="../services.html"
-                    class="nav-link"
-                >
-                    Services
-                </a>
-
-                <a
-                    href="../insights.html"
-                    class="nav-link active"
-                    aria-current="page"
-                >
-                    Insights
-                </a>
-
-                <a
-                    href="../contact.html"
-                    class="nav-link"
-                >
-                    Contact
-                </a>
-
-            </nav>
-
-
-            <!-- Mobile toggle -->
-
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Open navigation"
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-            >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-        </div>
-
-
-        <!-- =================================================
+      <!-- =================================================
              MOBILE NAVIGATION
         ================================================== -->
 
-        <nav
-            class="mobile-nav"
-            id="mobile-menu"
-            aria-label="Mobile navigation"
-        >
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation">
+        <div class="mobile-nav-panel">
+          <div class="mobile-nav-links">
+            <a href="../index.html" class="mobile-nav-link"> Home </a>
 
-            <div class="mobile-nav-panel">
+            <a href="../about.html" class="mobile-nav-link"> About </a>
 
+            <a href="../services.html" class="mobile-nav-link"> Services </a>
 
-                <div class="mobile-nav-links">
+            <a
+              href="../insights.html"
+              class="mobile-nav-link active"
+              aria-current="page"
+            >
+              Insights
+            </a>
 
-                    <a
-                        href="../index.html"
-                        class="mobile-nav-link"
-                    >
-                        Home
-                    </a>
+            <a href="../contact.html" class="mobile-nav-link"> Contact </a>
+          </div>
 
-                    <a
-                        href="../about.html"
-                        class="mobile-nav-link"
-                    >
-                        About
-                    </a>
+          <div class="mobile-nav-social">
+            <p>Connect with us</p>
 
-                    <a
-                        href="../services.html"
-                        class="mobile-nav-link"
-                    >
-                        Services
-                    </a>
+            <div class="mobile-nav-social-links">
+              <a
+                href="https://www.facebook.com/share/p/1GCcvotiUQ/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on Facebook"
+              >
+                <img src="../assets/social/facebook.svg" alt="" />
+              </a>
 
-                    <a
-                        href="../insights.html"
-                        class="mobile-nav-link active"
-                        aria-current="page"
-                    >
-                        Insights
-                    </a>
+              <a
+                href="https://x.com/MambodlaA"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on X"
+              >
+                <img src="../assets/social/x.svg" alt="" />
+              </a>
 
-                    <a
-                        href="../contact.html"
-                        class="mobile-nav-link"
-                    >
-                        Contact
-                    </a>
+              <a
+                href="https://www.linkedin.com/company/mambodla-professional-accountants/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on LinkedIn"
+              >
+                <img src="../assets/social/linkedin.svg" alt="" />
+              </a>
 
-                </div>
-
-
-                <div class="mobile-nav-social">
-
-                    <p>Connect with us</p>
-
-                    <div class="mobile-nav-social-links">
-
-                        <a
-                            href="https://www.facebook.com/share/p/1GCcvotiUQ/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on Facebook"
-                        >
-                            <img
-                                src="../assets/social/facebook.svg"
-                                alt=""
-                            >
-                        </a>
-
-                        <a
-                            href="https://x.com/MambodlaA"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on X"
-                        >
-                            <img
-                                src="../assets/social/x.svg"
-                                alt=""
-                            >
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/company/mambodla-professional-accountants/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on LinkedIn"
-                        >
-                            <img
-                                src="../assets/social/linkedin.svg"
-                                alt=""
-                            >
-                        </a>
-
-                        <a
-                            href="https://wa.me/27670776562"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Mambodla on WhatsApp"
-                        >
-                            <img
-                                src="../assets/social/whatsapp.svg"
-                                alt=""
-                            >
-                        </a>
-
-                    </div>
-
-                </div>
-
+              <a
+                href="https://wa.me/27670776562"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on WhatsApp"
+              >
+                <img src="../assets/social/whatsapp.svg" alt="" />
+              </a>
             </div>
-
-        </nav>
-
+          </div>
+        </div>
+      </nav>
     </header>
-
 
     <!-- =====================================================
          ARTICLE PAGE
     ====================================================== -->
 
     <main class="insight-article-page">
-
-        <article>
-
-
-            <!-- =================================================
+      <article>
+        <!-- =================================================
                  ARTICLE — INTRODUCTION
             ================================================== -->
 
-            <header
-                class="insight-article-hero"
-                id="page-lead"
-            >
+        <header class="insight-article-hero" id="page-lead">
+          <div class="container insight-article-hero-inner">
+            <!-- Back link -->
 
-                <div class="container insight-article-hero-inner">
+            <a href="../insights.html" class="insight-article-back">
+              <span aria-hidden="true">←</span>
 
+              <span> Back to Insights </span>
+            </a>
 
-                    <!-- Back link -->
+            <!-- Category -->
 
-                    <a
-                        href="../insights.html"
-                        class="insight-article-back"
-                    >
+            <p class="insight-article-category">Business Advice</p>
 
-                        <span aria-hidden="true">←</span>
+            <!-- Title -->
 
-                        <span>
-                            Back to Insights
-                        </span>
+            <h1 class="insight-article-title">
+              Why strategy matters more than ever
+            </h1>
 
-                    </a>
+            <!-- Standfirst -->
 
+            <p class="insight-article-standfirst">
+              Strategy gives a business something more valuable than a plan: a
+              clear basis for choosing where to focus, what to protect and which
+              opportunities are worth pursuing.
+            </p>
 
-                    <!-- Category -->
+            <!-- Metadata -->
 
-                    <p class="insight-article-category">
-                        Business Advice
-                    </p>
+            <div class="insight-article-meta">
+              <span> 03 Sep 2026 </span>
 
+              <span class="insight-article-meta-dot" aria-hidden="true"></span>
 
-                    <!-- Title -->
+              <span> 4 min read </span>
 
-                    <h1 class="insight-article-title">
-                        Why strategy matters more than ever
-                    </h1>
+              <span class="insight-article-meta-dot" aria-hidden="true"></span>
 
+              <span> Mambodla Professional Accountants </span>
+            </div>
+          </div>
 
-                    <!-- Standfirst -->
-
-                    <p class="insight-article-standfirst">
-
-                        Strategy gives a business something more
-                        valuable than a plan: a clear basis for
-                        choosing where to focus, what to protect and
-                        which opportunities are worth pursuing.
-
-                    </p>
-
-
-                    <!-- Metadata -->
-
-                    <div class="insight-article-meta">
-
-                        <span>
-                            03 Sep 2026
-                        </span>
-
-                        <span
-                            class="insight-article-meta-dot"
-                            aria-hidden="true"
-                        ></span>
-
-                        <span>
-                            4 min read
-                        </span>
-
-                        <span
-                            class="insight-article-meta-dot"
-                            aria-hidden="true"
-                        ></span>
-
-                        <span>
-                            Mambodla Professional Accountants
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      ARTICLE IMAGE
                 ================================================== -->
 
-                <div
-                    class="container insight-article-image-container"
-                    id="article-image"
-                >
+          <div
+            class="container insight-article-image-container"
+            id="article-image"
+          >
+            <figure class="insight-article-hero-figure">
+              <img
+                src="../assets/images/insights/insights-business-advisory.png"
+                alt="Chess pieces representing business strategy"
+                class="insight-article-hero-image"
+              />
+            </figure>
+          </div>
+        </header>
 
-                    <figure class="insight-article-hero-figure">
-
-                        <img
-                            src="../assets/images/insights/insights-business-advisory.png"
-                            alt="Chess pieces representing business strategy"
-                            class="insight-article-hero-image"
-                        >
-
-                    </figure>
-
-                </div>
-
-            </header>
-
-
-            <!-- =================================================
+        <!-- =================================================
                  ARTICLE BODY
             ================================================== -->
 
-            <div class="insight-article-body">
+        <div class="insight-article-body">
+          <!-- Opening -->
 
+          <div class="insight-article-copy" data-reveal>
+            <p class="insight-article-opening">
+              Businesses make decisions every day: what to sell, where to
+              invest, which customers to pursue, what to stop doing and how to
+              respond when conditions change.
+            </p>
 
-                <!-- Opening -->
+            <p>
+              Without a clear strategy, those decisions can become disconnected.
+              A business may stay busy while moving in several directions at
+              once. Strategy creates a shared point of reference. It helps
+              management decide what matters most and directs limited time,
+              money and attention toward the priorities that support long-term
+              value.
+            </p>
+          </div>
 
-                <div
-                    class="insight-article-copy"
-                    data-reveal
-                >
-
-                    <p class="insight-article-opening">
-
-                        Businesses make decisions every day: what to
-                        sell, where to invest, which customers to
-                        pursue, what to stop doing and how to respond
-                        when conditions change.
-
-                    </p>
-
-
-                    <p>
-
-                        Without a clear strategy, those decisions can
-                        become disconnected. A business may stay busy
-                        while moving in several directions at once.
-                        Strategy creates a shared point of reference.
-                        It helps management decide what matters most
-                        and directs limited time, money and attention
-                        toward the priorities that support long-term
-                        value.
-
-                    </p>
-
-                </div>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      SECTION 01
                 ================================================== -->
 
-                <section
-                    class="insight-article-section"
-                    aria-labelledby="article-section-direction"
-                    data-reveal
-                >
+          <section
+            class="insight-article-section"
+            aria-labelledby="article-section-direction"
+            data-reveal
+          >
+            <p class="insight-article-section-number">01</p>
 
-                    <p class="insight-article-section-number">
-                        01
-                    </p>
+            <h2 id="article-section-direction">
+              Give the business a clear direction
+            </h2>
 
+            <div class="insight-article-copy">
+              <p>
+                A strategy should answer a few important questions clearly: what
+                kind of business are we building, who do we want to serve, what
+                value do we offer and what must we do particularly well to
+                compete?
+              </p>
 
-                    <h2 id="article-section-direction">
-                        Give the business a clear direction
-                    </h2>
+              <p>
+                When these answers are understood, everyday decisions become
+                easier to evaluate. Opportunities can be tested against a clear
+                direction rather than judged only by how attractive they appear
+                in the moment.
+              </p>
 
+              <p>
+                Direction also helps teams understand why some priorities
+                receive more attention than others. People are more likely to
+                make aligned decisions when they know what the organisation is
+                trying to achieve.
+              </p>
+            </div>
+          </section>
 
-                    <div class="insight-article-copy">
-
-                        <p>
-
-                            A strategy should answer a few important
-                            questions clearly: what kind of business
-                            are we building, who do we want to serve,
-                            what value do we offer and what must we do
-                            particularly well to compete?
-
-                        </p>
-
-
-                        <p>
-
-                            When these answers are understood, everyday
-                            decisions become easier to evaluate.
-                            Opportunities can be tested against a clear
-                            direction rather than judged only by how
-                            attractive they appear in the moment.
-
-                        </p>
-
-
-                        <p>
-
-                            Direction also helps teams understand why
-                            some priorities receive more attention than
-                            others. People are more likely to make
-                            aligned decisions when they know what the
-                            organisation is trying to achieve.
-
-                        </p>
-
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      SECTION 02
                 ================================================== -->
 
-                <section
-                    class="insight-article-section"
-                    aria-labelledby="article-section-priorities"
-                    data-reveal
-                >
+          <section
+            class="insight-article-section"
+            aria-labelledby="article-section-priorities"
+            data-reveal
+          >
+            <p class="insight-article-section-number">02</p>
 
-                    <p class="insight-article-section-number">
-                        02
-                    </p>
+            <h2 id="article-section-priorities">
+              Turn limited resources into deliberate priorities
+            </h2>
 
+            <div class="insight-article-copy">
+              <p>
+                Every business operates with constraints. Capital, management
+                time, skills and operational capacity are never unlimited.
+              </p>
 
-                    <h2 id="article-section-priorities">
-                        Turn limited resources into deliberate priorities
-                    </h2>
+              <p>
+                Strategy forces choices. If everything is a priority, nothing
+                really is. Management should be able to identify the few areas
+                that deserve disproportionate focus because they create the
+                greatest value or protect the business from the greatest risk.
+              </p>
 
+              <p>
+                This discipline can prevent resources from being spread across
+                too many initiatives, each receiving too little attention to
+                deliver meaningful results.
+              </p>
+            </div>
+          </section>
 
-                    <div class="insight-article-copy">
-
-                        <p>
-
-                            Every business operates with constraints.
-                            Capital, management time, skills and
-                            operational capacity are never unlimited.
-
-                        </p>
-
-
-                        <p>
-
-                            Strategy forces choices. If everything is
-                            a priority, nothing really is. Management
-                            should be able to identify the few areas
-                            that deserve disproportionate focus because
-                            they create the greatest value or protect
-                            the business from the greatest risk.
-
-                        </p>
-
-
-                        <p>
-
-                            This discipline can prevent resources from
-                            being spread across too many initiatives,
-                            each receiving too little attention to
-                            deliver meaningful results.
-
-                        </p>
-
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      KEY TAKEAWAY
                 ================================================== -->
 
-                <aside
-                    class="insight-article-takeaway"
-                    aria-label="Key takeaway"
-                    data-reveal="fade"
-                >
+          <aside
+            class="insight-article-takeaway"
+            aria-label="Key takeaway"
+            data-reveal="fade"
+          >
+            <p class="insight-article-takeaway-label">Key takeaway</p>
 
-                    <p class="insight-article-takeaway-label">
-                        Key takeaway
-                    </p>
+            <p class="insight-article-takeaway-text">
+              Strategy is as much about deciding what not to do as it is about
+              deciding what to pursue.
+            </p>
+          </aside>
 
-
-                    <p class="insight-article-takeaway-text">
-
-                        Strategy is as much about deciding what not
-                        to do as it is about deciding what to pursue.
-
-                    </p>
-
-                </aside>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      SECTION 03
                 ================================================== -->
 
-                <section
-                    class="insight-article-section"
-                    aria-labelledby="article-section-financial"
-                    data-reveal
-                >
+          <section
+            class="insight-article-section"
+            aria-labelledby="article-section-financial"
+            data-reveal
+          >
+            <p class="insight-article-section-number">03</p>
 
-                    <p class="insight-article-section-number">
-                        03
-                    </p>
+            <h2 id="article-section-financial">
+              Connect strategy to financial reality
+            </h2>
 
+            <div class="insight-article-copy">
+              <p>A strategy becomes useful only when the numbers support it.</p>
 
-                    <h2 id="article-section-financial">
-                        Connect strategy to financial reality
-                    </h2>
+              <p>
+                Growth plans may require additional staff, equipment, working
+                capital or marketing spend. New products may take time to become
+                profitable. Entering a different market may create costs before
+                it creates revenue.
+              </p>
 
+              <p>
+                Financial forecasts help management test whether strategic
+                choices are affordable, what assumptions must hold true and how
+                much risk the business is taking. This is where accounting
+                information moves beyond reporting history and becomes part of
+                forward-looking decision-making.
+              </p>
+            </div>
+          </section>
 
-                    <div class="insight-article-copy">
-
-                        <p>
-
-                            A strategy becomes useful only when the
-                            numbers support it.
-
-                        </p>
-
-
-                        <p>
-
-                            Growth plans may require additional staff,
-                            equipment, working capital or marketing
-                            spend. New products may take time to become
-                            profitable. Entering a different market may
-                            create costs before it creates revenue.
-
-                        </p>
-
-
-                        <p>
-
-                            Financial forecasts help management test
-                            whether strategic choices are affordable,
-                            what assumptions must hold true and how
-                            much risk the business is taking. This is
-                            where accounting information moves beyond
-                            reporting history and becomes part of
-                            forward-looking decision-making.
-
-                        </p>
-
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      SECTION 04
                 ================================================== -->
 
-                <section
-                    class="insight-article-section"
-                    aria-labelledby="article-section-adapt"
-                    data-reveal
-                >
+          <section
+            class="insight-article-section"
+            aria-labelledby="article-section-adapt"
+            data-reveal
+          >
+            <p class="insight-article-section-number">04</p>
 
-                    <p class="insight-article-section-number">
-                        04
-                    </p>
+            <h2 id="article-section-adapt">
+              Stay adaptable without losing direction
+            </h2>
 
+            <div class="insight-article-copy">
+              <p>
+                Good strategy is not rigid. Markets change, customer
+                expectations evolve and new risks or opportunities emerge.
+              </p>
 
-                    <h2 id="article-section-adapt">
-                        Stay adaptable without losing direction
-                    </h2>
+              <p>
+                The objective is not to follow an old plan simply because it was
+                written down. It is to keep the underlying direction clear while
+                adjusting actions when evidence changes.
+              </p>
 
+              <p>
+                Regular strategic reviews can help leaders ask whether
+                assumptions still hold, whether priorities remain relevant and
+                whether the business is learning from actual results.
+                Adaptability becomes stronger when it is guided by purpose
+                rather than reaction.
+              </p>
+            </div>
+          </section>
 
-                    <div class="insight-article-copy">
-
-                        <p>
-
-                            Good strategy is not rigid. Markets change,
-                            customer expectations evolve and new risks
-                            or opportunities emerge.
-
-                        </p>
-
-
-                        <p>
-
-                            The objective is not to follow an old plan
-                            simply because it was written down. It is
-                            to keep the underlying direction clear
-                            while adjusting actions when evidence
-                            changes.
-
-                        </p>
-
-
-                        <p>
-
-                            Regular strategic reviews can help leaders
-                            ask whether assumptions still hold, whether
-                            priorities remain relevant and whether the
-                            business is learning from actual results.
-                            Adaptability becomes stronger when it is
-                            guided by purpose rather than reaction.
-
-                        </p>
-
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      SECTION 05
                 ================================================== -->
 
-                <section
-                    class="insight-article-section"
-                    aria-labelledby="article-section-execution"
-                    data-reveal
-                >
+          <section
+            class="insight-article-section"
+            aria-labelledby="article-section-execution"
+            data-reveal
+          >
+            <p class="insight-article-section-number">05</p>
 
-                    <p class="insight-article-section-number">
-                        05
-                    </p>
+            <h2 id="article-section-execution">
+              Make execution part of the strategy
+            </h2>
 
+            <div class="insight-article-copy">
+              <p>
+                A strategy that lives only in a document does not change a
+                business.
+              </p>
 
-                    <h2 id="article-section-execution">
-                        Make execution part of the strategy
-                    </h2>
+              <p>
+                The priorities need owners, measures, timelines and regular
+                review. Management should know which indicators show whether the
+                strategy is working and where progress is falling behind.
+              </p>
 
+              <p>Useful questions include:</p>
 
-                    <div class="insight-article-copy">
+              <ul class="insight-article-list">
+                <li>What are our three most important priorities right now?</li>
 
-                        <p>
+                <li>
+                  Which financial measures show whether those priorities are
+                  creating value?
+                </li>
 
-                            A strategy that lives only in a document
-                            does not change a business.
+                <li>Who is accountable for each major initiative?</li>
 
-                        </p>
+                <li>What assumptions are we relying on?</li>
 
+                <li>What would cause us to change course?</li>
 
-                        <p>
+                <li>What have we deliberately chosen not to pursue?</li>
+              </ul>
 
-                            The priorities need owners, measures,
-                            timelines and regular review. Management
-                            should know which indicators show whether
-                            the strategy is working and where progress
-                            is falling behind.
+              <p>
+                Strategy becomes powerful when choices, resources and
+                accountability all point in the same direction.
+              </p>
+            </div>
+          </section>
 
-                        </p>
-
-
-                        <p>
-
-                            Useful questions include:
-
-                        </p>
-
-
-                        <ul class="insight-article-list">
-
-                            <li>
-                                What are our three most important
-                                priorities right now?
-                            </li>
-
-                            <li>
-                                Which financial measures show whether
-                                those priorities are creating value?
-                            </li>
-
-                            <li>
-                                Who is accountable for each major
-                                initiative?
-                            </li>
-
-                            <li>
-                                What assumptions are we relying on?
-                            </li>
-
-                            <li>
-                                What would cause us to change course?
-                            </li>
-
-                            <li>
-                                What have we deliberately chosen not
-                                to pursue?
-                            </li>
-
-                        </ul>
-
-
-                        <p>
-
-                            Strategy becomes powerful when choices,
-                            resources and accountability all point in
-                            the same direction.
-
-                        </p>
-
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      MAMBODLA PERSPECTIVE
                 ================================================== -->
 
-                <section
-                    class="insight-article-perspective"
-                    aria-labelledby="mambodla-perspective-title"
-                    data-reveal
-                >
+          <section
+            class="insight-article-perspective"
+            aria-labelledby="mambodla-perspective-title"
+            data-reveal
+          >
+            <p class="insight-article-perspective-eyebrow">
+              Mambodla Perspective
+            </p>
 
-                    <p class="insight-article-perspective-eyebrow">
-                        Mambodla Perspective
-                    </p>
+            <h2 id="mambodla-perspective-title">
+              Strategy is not a document. It is the discipline of choosing what
+              matters most.
+            </h2>
 
+            <p>
+              Strong businesses connect ambition to evidence. They understand
+              their numbers, make deliberate choices and review those choices as
+              conditions change. Strategy gives those decisions a common
+              direction and turns activity into purposeful progress.
+            </p>
+          </section>
 
-                    <h2 id="mambodla-perspective-title">
-                        Strategy is not a document. It is the discipline of choosing what matters most.
-                    </h2>
-
-
-                    <p>
-
-                        Strong businesses connect ambition to evidence.
-                        They understand their numbers, make deliberate
-                        choices and review those choices as conditions
-                        change. Strategy gives those decisions a common
-                        direction and turns activity into purposeful
-                        progress.
-
-                    </p>
-
-                </section>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      ARTICLE CTA
                 ================================================== -->
 
-                <section
-                    class="insight-article-cta"
-                    aria-labelledby="article-cta-title"
-                    data-reveal
-                >
+          <section
+            class="insight-article-cta"
+            aria-labelledby="article-cta-title"
+            data-reveal
+          >
+            <div class="insight-article-cta-copy">
+              <p class="insight-article-cta-eyebrow">Business Advisory</p>
 
-                    <div class="insight-article-cta-copy">
+              <h2 id="article-cta-title">
+                Turn business ambition into clearer priorities.
+              </h2>
 
-                        <p class="insight-article-cta-eyebrow">
-                            Business Advisory
-                        </p>
+              <p>
+                Mambodla Professional Accountants works with businesses to
+                strengthen planning, improve financial visibility and make
+                informed strategic decisions with greater confidence.
+              </p>
+            </div>
 
+            <a href="../services.html" class="insight-article-cta-link">
+              <span> Explore Business Advisory </span>
 
-                        <h2 id="article-cta-title">
-                            Turn business ambition into clearer priorities.
-                        </h2>
+              <span aria-hidden="true"> → </span>
+            </a>
+          </section>
 
-
-                        <p>
-
-                            Mambodla Professional Accountants works
-                            with businesses to strengthen planning,
-                            improve financial visibility and make
-                            informed strategic decisions with greater
-                            confidence.
-
-                        </p>
-
-                    </div>
-
-
-                    <a
-                        href="../services.html"
-                        class="insight-article-cta-link"
-                    >
-
-                        <span>
-                            Explore Business Advisory
-                        </span>
-
-                        <span aria-hidden="true">
-                            →
-                        </span>
-
-                    </a>
-
-                </section>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      ARTICLE FOOTER
                 ================================================== -->
 
-                <footer
-                    class="insight-article-footer"
-                    data-reveal
-                >
+          <footer class="insight-article-footer" data-reveal>
+            <div>
+              <p class="insight-article-footer-label">Continue exploring</p>
 
-                    <div>
+              <h2>More ideas, knowledge and perspectives.</h2>
+            </div>
 
-                        <p class="insight-article-footer-label">
-                            Continue exploring
-                        </p>
+            <a href="../insights.html" class="insight-article-return-link">
+              <span> View all Insights </span>
 
+              <span aria-hidden="true"> → </span>
+            </a>
+          </footer>
 
-                        <h2>
-                            More ideas, knowledge and perspectives.
-                        </h2>
-
-                    </div>
-
-
-                    <a
-                        href="../insights.html"
-                        class="insight-article-return-link"
-                    >
-
-                        <span>
-                            View all Insights
-                        </span>
-
-                        <span aria-hidden="true">
-                            →
-                        </span>
-
-                    </a>
-
-                </footer>
-
-
-                <!-- =================================================
+          <!-- =================================================
                      DISCLAIMER
                 ================================================== -->
 
-                <p
-                    class="insight-article-disclaimer"
-                    data-reveal="fade"
-                >
-
-                    This article is intended for general informational
-                    purposes and does not constitute accounting,
-                    tax, financial or other professional advice.
-                    Appropriate professional guidance should be
-                    obtained for circumstances specific to your
-                    business.
-
-                </p>
-
-            </div>
-
-        </article>
-
+          <p class="insight-article-disclaimer" data-reveal="fade">
+            This article is intended for general informational purposes and does
+            not constitute accounting, tax, financial or other professional
+            advice. Appropriate professional guidance should be obtained for
+            circumstances specific to your business.
+          </p>
+        </div>
+      </article>
     </main>
-
 
     <!-- =====================================================
          SITE FOOTER
     ====================================================== -->
 
     <footer class="site-footer">
-
-        <div class="container footer-inner">
-
-
-            <div class="footer-copyright">
-
-                <p>
-                    &copy;
-                    <span id="current-year"></span>
-                    Mambodla Professional Accountants
-                </p>
-
-            </div>
-
-
-            <div class="footer-legal">
-
-                <a href="#">
-                    Privacy Policy
-                </a>
-
-                <a href="#">
-                    Terms &amp; Conditions
-                </a>
-
-            </div>
-
-
-            <div
-                class="footer-social"
-                aria-label="Social media links"
-            >
-
-                <a
-                    href="https://www.facebook.com/share/p/1GCcvotiUQ/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Mambodla on Facebook"
-                >
-                    <img
-                        src="../assets/social/facebook.svg"
-                        alt=""
-                    >
-                </a>
-
-                <a
-                    href="https://x.com/MambodlaA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Mambodla on X"
-                >
-                    <img
-                        src="../assets/social/x.svg"
-                        alt=""
-                    >
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/company/mambodla-professional-accountants/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Mambodla on LinkedIn"
-                >
-                    <img
-                        src="../assets/social/linkedin.svg"
-                        alt=""
-                    >
-                </a>
-
-                <a
-                    href="https://wa.me/27670776562"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Contact Mambodla on WhatsApp"
-                >
-                    <img
-                        src="../assets/social/whatsapp.svg"
-                        alt=""
-                    >
-                </a>
-
-            </div>
-
+      <div class="container footer-inner">
+        <div class="footer-copyright">
+          <p>
+            &copy;
+            <span id="current-year"></span>
+            Mambodla Professional Accountants
+          </p>
         </div>
 
-    </footer>
+        <div class="footer-legal">
+          <a href="#"> Privacy Policy </a>
 
+          <a href="#"> Terms &amp; Conditions </a>
+        </div>
+
+        <div class="footer-social" aria-label="Social media links">
+          <a
+            href="https://www.facebook.com/share/p/1GCcvotiUQ/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on Facebook"
+          >
+            <img src="../assets/social/facebook.svg" alt="" />
+          </a>
+
+          <a
+            href="https://x.com/MambodlaA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on X"
+          >
+            <img src="../assets/social/x.svg" alt="" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/mambodla-professional-accountants/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on LinkedIn"
+          >
+            <img src="../assets/social/linkedin.svg" alt="" />
+          </a>
+
+          <a
+            href="https://wa.me/27670776562"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact Mambodla on WhatsApp"
+          >
+            <img src="../assets/social/whatsapp.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
 
     <!-- =====================================================
          GLOBAL JAVASCRIPT
     ====================================================== -->
 
     <script src="../js/main.js"></script>
-
-</body>
-
+  </body>
 </html>
