@@ -1607,6 +1607,390 @@ body.menu-open .back-to-top {
 }
 
 /* =========================================================
+   HOME — ARRIVAL CHOREOGRAPHY
+   MAMBODLA INTRODUCTION
+========================================================= */
+
+.brand-logo-home {
+  overflow: visible;
+}
+
+.brand-logo-home path {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* =========================================================
+   FRESH ARRIVAL — INITIAL STATE
+========================================================= */
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-logo-sweep,
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-logo-left,
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-logo-right,
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-logo-crown,
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-logo-wordmark,
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-hero-title
+  > span,
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-hero-description,
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-hero-actions,
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-service-card {
+  opacity: 0;
+}
+
+/* Logo starting positions */
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-logo-sweep {
+  transform: translateY(5px) scale(0.985);
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-logo-left {
+  transform: translateX(-5px) scale(0.985);
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-logo-right {
+  transform: translateX(5px) scale(0.985);
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-logo-crown {
+  transform: translateY(-5px) scale(0.985);
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-logo-wordmark {
+  transform: translateY(4px);
+}
+
+/* Hero starting positions */
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-hero-title
+  > span {
+  transform: translateY(12px);
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-hero-description,
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-hero-actions {
+  transform: translateY(10px);
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-service-card {
+  transform: translateY(14px) scale(0.99);
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-hero-background {
+  transform: scale(1.025);
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body:not(.home-intro-started):not(.home-intro-complete)
+  .home-hero-overlay {
+  opacity: 0.78;
+}
+
+/* =========================================================
+   FRESH ARRIVAL — GO
+========================================================= */
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-logo-sweep {
+  animation: home-logo-sweep-in 420ms var(--motion-ease) 40ms both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-logo-left {
+  animation: home-logo-left-in 430ms var(--motion-ease) 125ms both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-logo-right {
+  animation: home-logo-right-in 430ms var(--motion-ease) 205ms both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-logo-crown {
+  animation: home-logo-crown-in 420ms var(--motion-ease) 285ms both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-logo-wordmark {
+  animation: home-logo-wordmark-in 420ms var(--motion-ease) 390ms both;
+}
+
+/* Background settles beneath the brand */
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-hero-background {
+  animation: home-background-settle 1050ms var(--motion-ease) both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-hero-overlay {
+  animation: home-overlay-settle 650ms var(--motion-ease-soft) 120ms both;
+}
+
+/* Headline */
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-hero-title
+  > span:nth-child(1) {
+  animation: home-copy-in 520ms var(--motion-ease) 610ms both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-hero-title
+  > span:nth-child(2) {
+  animation: home-copy-in 520ms var(--motion-ease) 690ms both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-hero-title
+  > span:nth-child(3) {
+  animation: home-copy-in 540ms var(--motion-ease) 770ms both;
+}
+
+/* Description + actions */
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-hero-description {
+  animation: home-copy-in 520ms var(--motion-ease) 900ms both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-hero-actions {
+  animation: home-copy-in 520ms var(--motion-ease) 1010ms both;
+}
+
+/* Service cards — 1 2 3 4 */
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-service-card:nth-child(1) {
+  animation: home-card-in 560ms var(--motion-ease) 1140ms both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-service-card:nth-child(2) {
+  animation: home-card-in 560ms var(--motion-ease) 1210ms both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-service-card:nth-child(3) {
+  animation: home-card-in 560ms var(--motion-ease) 1280ms both;
+}
+
+html[data-home-arrival="fresh"]
+  body.home-page-body.home-intro-started
+  .home-service-card:nth-child(4) {
+  animation: home-card-in 560ms var(--motion-ease) 1350ms both;
+}
+
+/* =========================================================
+   RETURN HOME — COMPLETE LOGO ONLY
+========================================================= */
+
+html[data-home-arrival="return"] .brand-logo-home {
+  opacity: 0.96;
+
+  transform: scale(0.985);
+
+  transform-origin: center;
+
+  transition:
+    opacity 320ms var(--motion-ease),
+    transform 320ms var(--motion-ease);
+}
+
+html[data-home-arrival="return"]
+  body.home-page-body.home-return-complete
+  .brand-logo-home {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+@keyframes home-logo-sweep-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes home-logo-left-in {
+  from {
+    opacity: 0;
+    transform: translateX(-5px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes home-logo-right-in {
+  from {
+    opacity: 0;
+    transform: translateX(5px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes home-logo-crown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes home-logo-wordmark-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-copy-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes home-background-settle {
+  from {
+    transform: scale(1.025);
+  }
+
+  to {
+    transform: scale(1.002);
+  }
+}
+
+@keyframes home-overlay-settle {
+  from {
+    opacity: 0.78;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-home-arrival] .brand-logo-home,
+  html[data-home-arrival] .brand-logo-home path,
+  html[data-home-arrival] .home-hero-background,
+  html[data-home-arrival] .home-hero-overlay,
+  html[data-home-arrival] .home-hero-title > span,
+  html[data-home-arrival] .home-hero-description,
+  html[data-home-arrival] .home-hero-actions,
+  html[data-home-arrival] .home-service-card {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html[data-home-arrival] .home-hero-background {
+    transform: scale(1.002) !important;
+  }
+}
+
+/* =========================================================
    ABOUT PAGE
 ========================================================= */
 
@@ -5796,7 +6180,7 @@ body.menu-open .back-to-top {
   line-height: 1.35;
 }
 
-.contact-field label span {
+.contact-field label > span[aria-hidden="true"] {
   color: var(--color-gold);
 }
 
@@ -6241,6 +6625,170 @@ body.menu-open .back-to-top {
 }
 
 /* =========================================================
+   CONTACT FORM — ADAPTIVE COMMUNICATION + VALIDATION
+========================================================= */
+
+/* =========================================================
+   FORM HEADING — CONTEXT
+========================================================= */
+
+.contact-form-heading {
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.contact-form-heading.is-switching {
+  opacity: 0;
+
+  transform: translate3d(0, 4px, 0);
+}
+
+.contact-form-heading .contact-form-context {
+  max-width: 480px;
+  min-height: calc(1.65em * 2);
+
+  margin: 0.55rem 0 0;
+
+  color: var(--color-navy);
+
+  font-size: 0.74rem;
+  line-height: 1.65;
+}
+
+.contact-form-required {
+  margin: 0.45rem 0 0 !important;
+
+  color: var(--color-muted) !important;
+
+  font-size: 0.68rem !important;
+}
+
+.contact-form-required span {
+  color: var(--color-gold);
+}
+
+/* =========================================================
+   VALIDATION ERROR
+========================================================= */
+
+.contact-field-error {
+  margin: 0.45rem 0 0;
+
+  color: #934444;
+
+  font-size: 0.66rem;
+  font-weight: 500;
+
+  line-height: 1.45;
+
+  opacity: 1;
+
+  transform: translate3d(0, 0, 0);
+
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.contact-field-error {
+  min-height: 1.45em;
+
+  margin: 0.45rem 0 0;
+
+  color: #934444;
+
+  font-size: 0.66rem;
+  font-weight: 500;
+
+  line-height: 1.45;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity var(--transition-fast),
+    visibility var(--transition-fast);
+}
+
+.contact-field-error[hidden] {
+  display: block;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* =========================================================
+   INVALID FIELD
+========================================================= */
+
+.contact-field.is-invalid input,
+.contact-field.is-invalid select,
+.contact-field.is-invalid textarea {
+  border-color: rgba(147, 68, 68, 0.7);
+
+  background-color: rgba(255, 248, 248, 0.82);
+
+  box-shadow: 0 0 0 3px rgba(147, 68, 68, 0.06);
+}
+
+.contact-field.is-invalid .contact-field-icon {
+  stroke: #934444;
+}
+
+.contact-field.is-invalid input:focus,
+.contact-field.is-invalid select:focus,
+.contact-field.is-invalid textarea:focus {
+  border-color: rgba(147, 68, 68, 0.82);
+
+  box-shadow: 0 0 0 3px rgba(147, 68, 68, 0.09);
+}
+
+/* =========================================================
+   FORM STATUS
+   Reserved lane — no layout shift
+========================================================= */
+
+.contact-form-status {
+  min-height: calc((1.55em * 2) + 1.5rem);
+
+  margin: 1rem 0 0;
+
+  padding: 0.75rem 0.9rem;
+
+  border-left: 2px solid var(--color-gold);
+
+  color: var(--color-navy);
+
+  background-color: rgba(185, 147, 82, 0.06);
+
+  font-size: 0.7rem;
+  line-height: 1.55;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translate3d(0, 4px, 0);
+
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    visibility 0s linear var(--transition-fast);
+}
+
+.contact-form-status.is-visible {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translate3d(0, 0, 0);
+
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    visibility 0s linear 0s;
+}
+
+/* =========================================================
    CONTACT DETAILS
 ========================================================= */
 
@@ -6352,6 +6900,15 @@ body.menu-open .back-to-top {
   );
 
   box-shadow: 0 10px 24px rgba(11, 34, 57, 0.055);
+}
+
+/* =========================================================
+   CONTACT DETAIL CARD — REVEALED HOVER
+   Preserve universal Mambodla card lift
+========================================================= */
+
+.contact-detail-card[data-reveal].reveal-pending.is-visible:hover {
+  transform: translateY(-3px);
 }
 
 /* =========================================================

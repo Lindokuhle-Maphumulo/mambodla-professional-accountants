@@ -1046,43 +1046,628 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
 })();
 
 /* =========================================================
-   CONTACT — ENQUIRY PRESELECTION
-   Insights CTA → Contact form
+   CONTACT — ADAPTIVE ENQUIRY + VALIDATION
+   One form. Different conversations.
 ========================================================= */
 
 (() => {
-  const serviceSelect = document.querySelector("#contact-service");
+  const form = document.querySelector("[data-contact-form]");
 
-  if (!serviceSelect) {
+  if (!form) {
     return;
   }
+
+  const serviceSelect = document.querySelector("#contact-service");
+
+  const formHeading = document.querySelector("[data-contact-form-heading]");
+
+  const formTitle = document.querySelector("[data-contact-form-title]");
+
+  const formContext = document.querySelector("[data-contact-form-context]");
+
+  const subjectLabel = document.querySelector("[data-contact-subject-label]");
+
+  const messageLabel = document.querySelector("[data-contact-message-label]");
+
+  const submitLabel = document.querySelector("[data-contact-submit-label]");
+
+  const formStatus = document.querySelector("[data-contact-form-status]");
+
+  const fields = [...form.querySelectorAll("[data-contact-field]")];
+
+  const controls = {
+    name: document.querySelector("#contact-name"),
+
+    email: document.querySelector("#contact-email"),
+
+    phone: document.querySelector("#contact-phone"),
+
+    service: serviceSelect,
+
+    subject: document.querySelector("#contact-subject"),
+
+    message: document.querySelector("#contact-message"),
+  };
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  let activeIntent = "";
+
+  /* =====================================================
+     ADAPTIVE FORM COPY
+  ====================================================== */
+
+  const intents = {
+    "": {
+      title: "Send us a message",
+      context:
+        "Tell us what you need and we’ll point you in the right direction.",
+      subject: "Subject",
+      message: "Message",
+      submit: "Let’s Talk",
+      subjectError: "Please enter a subject.",
+      messageError: "Please enter your message.",
+    },
+
+    accounting: {
+      title: "Let’s talk accounting",
+      context:
+        "Tell us where you need clarity, support or stronger financial reporting.",
+      subject: "Accounting enquiry",
+      message: "Tell us about your accounting needs",
+      submit: "Send enquiry",
+      subjectError: "Please tell us what your accounting enquiry is about.",
+      messageError: "Please tell us a little about your accounting needs.",
+    },
+
+    tax: {
+      title: "Let’s talk tax",
+      context:
+        "Tell us about the tax matter, deadline or compliance issue you need help with.",
+      subject: "Tax enquiry",
+      message: "Tell us about your tax matter",
+      submit: "Send enquiry",
+      subjectError: "Please tell us what your tax enquiry is about.",
+      messageError: "Please tell us a little about your tax matter.",
+    },
+
+    payroll: {
+      title: "Let’s talk payroll",
+      context:
+        "Tell us where you need payroll support, compliance assistance or greater peace of mind.",
+      subject: "Payroll enquiry",
+      message: "Tell us about your payroll needs",
+      submit: "Send enquiry",
+      subjectError: "Please tell us what your payroll enquiry is about.",
+      messageError: "Please tell us a little about your payroll needs.",
+    },
+
+    advisory: {
+      title: "Let’s talk business",
+      context:
+        "Tell us about the decision, challenge or opportunity you would like to explore with us.",
+      subject: "Business advisory enquiry",
+      message: "Tell us about your business",
+      submit: "Start the conversation",
+      subjectError: "Please tell us what you would like to discuss.",
+      messageError: "Please tell us a little about your business or situation.",
+    },
+
+    "insight-contribution": {
+      title: "Share your insight with us",
+      context:
+        "Give us your article topic and a short outline. We’ll review the idea and get back to you.",
+      subject: "Article title / topic",
+      message: "Short article summary",
+      submit: "Submit your idea",
+      subjectError: "Please enter your article title or topic.",
+      messageError: "Please give us a short summary of your article idea.",
+    },
+
+    other: {
+      title: "Tell us what you need",
+      context:
+        "Not sure which service fits? Tell us what you’re working through and we’ll guide you.",
+      subject: "Subject",
+      message: "Message",
+      submit: "Send enquiry",
+      subjectError: "Please tell us what your enquiry is about.",
+      messageError:
+        "Please give us a little more information about your enquiry.",
+    },
+  };
+
+  /* =====================================================
+     APPLY FORM INTENT
+  ====================================================== */
+
+  const applyIntent = (intent, animate = true) => {
+    const safeIntent = Object.hasOwn(intents, intent) ? intent : "";
+
+    const copy = intents[safeIntent];
+
+    activeIntent = safeIntent;
+
+    const updateCopy = () => {
+      if (formTitle) {
+        formTitle.textContent = copy.title;
+      }
+
+      if (formContext) {
+        formContext.textContent = copy.context;
+      }
+
+      if (subjectLabel) {
+        subjectLabel.textContent = copy.subject;
+      }
+
+      if (messageLabel) {
+        messageLabel.textContent = copy.message;
+      }
+
+      if (submitLabel) {
+        submitLabel.textContent = copy.submit;
+      }
+    };
+
+    if (!animate || reduceMotion.matches || !formHeading) {
+      updateCopy();
+
+      return;
+    }
+
+    formHeading.classList.add("is-switching");
+
+    window.setTimeout(() => {
+      updateCopy();
+
+      requestAnimationFrame(() => {
+        formHeading.classList.remove("is-switching");
+      });
+    }, 120);
+  };
+
+  /* =====================================================
+     URL INTENT
+  ====================================================== */
 
   const params = new URLSearchParams(window.location.search);
 
-  const enquiry = params.get("enquiry");
+  const requestedIntent = params.get("enquiry") || "";
 
-  if (!enquiry) {
+  if (serviceSelect && requestedIntent) {
+    const validOption = [...serviceSelect.options].some(
+      (option) => option.value === requestedIntent,
+    );
+
+    if (validOption) {
+      serviceSelect.value = requestedIntent;
+
+      applyIntent(requestedIntent, false);
+    } else {
+      applyIntent("", false);
+    }
+  } else {
+    applyIntent(serviceSelect?.value || "", false);
+  }
+
+  /* =====================================================
+     MANUAL ENQUIRY CHANGE
+  ====================================================== */
+
+  if (serviceSelect) {
+    serviceSelect.addEventListener("change", () => {
+      applyIntent(serviceSelect.value, true);
+
+      validateField("service");
+    });
+  }
+
+  /* =====================================================
+     ERROR HELPERS
+  ====================================================== */
+
+  const getField = (fieldName) =>
+    form.querySelector(`[data-contact-field="${fieldName}"]`);
+
+  const getError = (fieldName) =>
+    getField(fieldName)?.querySelector("[data-contact-error]");
+
+  const clearError = (fieldName) => {
+    const field = getField(fieldName);
+
+    const control = controls[fieldName];
+
+    const error = getError(fieldName);
+
+    if (!field || !control) {
+      return;
+    }
+
+    field.classList.remove("is-invalid");
+
+    control.removeAttribute("aria-invalid");
+
+    if (error) {
+      error.textContent = "";
+      error.hidden = true;
+    }
+  };
+
+  const setError = (fieldName, message) => {
+    const field = getField(fieldName);
+
+    const control = controls[fieldName];
+
+    const error = getError(fieldName);
+
+    if (!field || !control) {
+      return false;
+    }
+
+    field.classList.add("is-invalid");
+
+    control.setAttribute("aria-invalid", "true");
+
+    if (error) {
+      error.textContent = message;
+
+      error.hidden = false;
+    }
+
+    return false;
+  };
+
+  /* =====================================================
+     NORMALISATION HELPERS
+  ====================================================== */
+
+  const compactPhone = (value) => value.trim().replace(/[\s().-]/g, "");
+
+  const isValidSouthAfricanPhone = (value) => {
+    const phone = compactPhone(value);
+
+    return /^0\d{9}$/.test(phone) || /^\+27\d{9}$/.test(phone);
+  };
+
+  /* =====================================================
+     FIELD VALIDATION
+  ====================================================== */
+
+  const validateField = (fieldName) => {
+    const control = controls[fieldName];
+
+    if (!control) {
+      return true;
+    }
+
+    const value = control.value.trim();
+
+    clearError(fieldName);
+
+    /* -------------------------------------------------
+   NAME
+------------------------------------------------- */
+
+    if (fieldName === "name") {
+      if (!value) {
+        return setError(fieldName, "Please enter your full name.");
+      }
+
+      const validCharacters = /^[\p{L}\p{M}.'’\-\s]+$/u.test(value);
+
+      const nameParts = value.trim().split(/\s+/).filter(Boolean);
+
+      const hasEnoughLetters = nameParts.every((part) => {
+        const letters = part.match(/\p{L}/gu) || [];
+
+        return letters.length >= 2;
+      });
+
+      if (!validCharacters || nameParts.length < 2 || !hasEnoughLetters) {
+        return setError(fieldName, "Please enter your full name.");
+      }
+
+      return true;
+    }
+
+    /* -------------------------------------------------
+   EMAIL
+------------------------------------------------- */
+
+    if (fieldName === "email") {
+      if (!value) {
+        return setError(fieldName, "Please enter your email address.");
+      }
+
+      const validEmail =
+        /^[A-Za-z0-9](?:[A-Za-z0-9._%+-]*[A-Za-z0-9])?@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z]{2,})+$/.test(
+          value,
+        ) && !value.includes("..");
+
+      if (!validEmail) {
+        return setError(fieldName, "Please enter a valid email address.");
+      }
+
+      return true;
+    }
+
+    /* -------------------------------------------------
+       PHONE
+    ------------------------------------------------- */
+
+    if (fieldName === "phone") {
+      if (!value) {
+        return setError(fieldName, "Please enter your phone number.");
+      }
+
+      if (!isValidSouthAfricanPhone(value)) {
+        return setError(
+          fieldName,
+          "Use a valid South African number, for example 082 123 4567 or +27 82 123 4567.",
+        );
+      }
+
+      return true;
+    }
+
+    /* -------------------------------------------------
+       SERVICE / ENQUIRY
+    ------------------------------------------------- */
+
+    if (fieldName === "service") {
+      if (!value) {
+        return setError(fieldName, "Please select how we can help you.");
+      }
+
+      return true;
+    }
+
+    /* -------------------------------------------------
+       SUBJECT
+    ------------------------------------------------- */
+
+    if (fieldName === "subject") {
+      if (!value) {
+        return setError(
+          fieldName,
+          intents[activeIntent]?.subjectError || intents[""].subjectError,
+        );
+      }
+
+      if (value.length < 3) {
+        return setError(fieldName, "Please add a little more detail.");
+      }
+
+      return true;
+    }
+
+    /* -------------------------------------------------
+       MESSAGE
+    ------------------------------------------------- */
+
+    if (fieldName === "message") {
+      if (!value) {
+        return setError(
+          fieldName,
+          intents[activeIntent]?.messageError || intents[""].messageError,
+        );
+      }
+
+      if (value.length < 10) {
+        return setError(
+          fieldName,
+          "Please add a little more information so we can understand your enquiry.",
+        );
+      }
+
+      return true;
+    }
+
+    return true;
+  };
+
+  /* =====================================================
+     VALIDATE WHILE USING THE FORM
+  ====================================================== */
+
+  Object.entries(controls).forEach(([fieldName, control]) => {
+    if (!control) {
+      return;
+    }
+
+    control.addEventListener("blur", () => {
+      validateField(fieldName);
+    });
+
+    control.addEventListener("input", () => {
+      const field = getField(fieldName);
+
+      if (field?.classList.contains("is-invalid")) {
+        validateField(fieldName);
+      }
+
+      if (formStatus && formStatus.classList.contains("is-visible")) {
+        formStatus.classList.remove("is-visible");
+        formStatus.textContent = "";
+      }
+    });
+  });
+
+  /* =====================================================
+     FULL FORM VALIDATION
+  ====================================================== */
+
+  const validateForm = () => {
+    const fieldOrder = [
+      "name",
+      "email",
+      "phone",
+      "service",
+      "subject",
+      "message",
+    ];
+
+    let firstInvalidField = null;
+
+    fieldOrder.forEach((fieldName) => {
+      const valid = validateField(fieldName);
+
+      if (!valid && !firstInvalidField) {
+        firstInvalidField = controls[fieldName];
+      }
+    });
+
+    return {
+      valid: !firstInvalidField,
+
+      firstInvalidField,
+    };
+  };
+
+  /* =====================================================
+     SUBMIT
+  ====================================================== */
+
+  form.addEventListener("submit", (event) => {
+    const result = validateForm();
+
+    if (!result.valid) {
+      event.preventDefault();
+
+      const invalidField = result.firstInvalidField;
+
+      if (invalidField) {
+        invalidField.focus({
+          preventScroll: true,
+        });
+
+        invalidField.closest(".contact-field")?.scrollIntoView({
+          behavior: reduceMotion.matches ? "auto" : "smooth",
+
+          block: "center",
+        });
+      }
+
+      return;
+    }
+
+    /*
+        The form UX and validation are now complete,
+        but no delivery service/backend has been
+        connected yet.
+
+        Prevent a fake submission while action="#".
+      */
+
+    const action = form.getAttribute("action");
+
+    if (!action || action === "#") {
+      event.preventDefault();
+
+      if (formStatus) {
+        formStatus.textContent =
+          "Everything looks good. Online message delivery still needs to be connected before this form can send enquiries.";
+
+        requestAnimationFrame(() => {
+          formStatus.classList.add("is-visible");
+        });
+      }
+    }
+  });
+})();
+
+/* =========================================================
+   HOME — ARRIVAL CHOREOGRAPHY
+   Fresh introduction / internal return
+========================================================= */
+
+(() => {
+  const body = document.querySelector(".home-page-body");
+
+  if (!body) {
     return;
   }
 
-  const matchingOption = [...serviceSelect.options].some(
-    (option) => option.value === enquiry,
-  );
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  if (!matchingOption) {
+  const finishImmediately = () => {
+    body.classList.add("home-intro-complete", "home-return-complete");
+  };
+
+  if (reduceMotion.matches) {
+    finishImmediately();
+
     return;
   }
 
-  serviceSelect.value = enquiry;
+  /* =====================================================
+     INTERNAL RETURN
+  ====================================================== */
+
+  const finishReturn = () => {
+    requestAnimationFrame(() => {
+      body.classList.add("home-return-complete");
+    });
+  };
+
+  window.addEventListener("pagereveal", (event) => {
+    const transition = event.viewTransition;
+
+    const fromURL = window.navigation?.activation?.from?.url;
+
+    /*
+        A real cross-document transition into Home
+        always counts as an internal return.
+
+        This also protects us if browser referrer
+        handling differs during local testing.
+      */
+
+    if (transition && fromURL) {
+      document.documentElement.dataset.homeArrival = "return";
+
+      body.classList.add("home-intro-complete");
+
+      transition.finished.finally(finishReturn);
+
+      return;
+    }
+
+    if (document.documentElement.dataset.homeArrival === "return") {
+      finishReturn();
+    }
+  });
+
+  /* =====================================================
+     FRESH ARRIVAL
+  ====================================================== */
+
+  if (document.documentElement.dataset.homeArrival !== "fresh") {
+    return;
+  }
 
   /*
-    Tell any future form logic that the field
-    has been intentionally updated.
+    Two frames guarantee that the browser paints
+    the deliberately hidden starting composition
+    before we begin the introduction.
   */
 
-  serviceSelect.dispatchEvent(
-    new Event("change", {
-      bubbles: true,
-    }),
-  );
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      body.classList.add("home-intro-started");
+    });
+  });
+
+  /*
+    Once every element has settled, remove the
+    temporary animation state so normal hover
+    interactions regain complete ownership.
+  */
+
+  window.setTimeout(() => {
+    body.classList.add("home-intro-complete");
+
+    body.classList.remove("home-intro-started");
+  }, 2050);
 })();
