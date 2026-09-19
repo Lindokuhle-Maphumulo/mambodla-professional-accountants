@@ -21,13 +21,20 @@
       (() => {
         const navigationEntry = performance.getEntriesByType("navigation")[0];
 
-        const isReload = navigationEntry?.type === "reload";
+        const activation = window.navigation?.activation;
+
+        const navigationType =
+          activation?.navigationType || navigationEntry?.type || "navigate";
+
+        const isReload = navigationType === "reload";
+
+        const fromURL = activation?.from?.url || document.referrer || "";
 
         let internalReturn = false;
 
         try {
-          if (document.referrer) {
-            const previous = new URL(document.referrer);
+          if (!isReload && fromURL) {
+            const previous = new URL(fromURL);
 
             const current = new URL(window.location.href);
 
@@ -39,8 +46,9 @@
           internalReturn = false;
         }
 
-        document.documentElement.dataset.homeArrival =
-          !isReload && internalReturn ? "return" : "fresh";
+        document.documentElement.dataset.homeArrival = internalReturn
+          ? "return"
+          : "fresh";
       })();
     </script>
 

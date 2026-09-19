@@ -1595,11 +1595,62 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
     body.classList.add("home-intro-complete", "home-return-complete");
   };
 
+  /* =====================================================
+     HOME RELOAD
+     Fresh Home owns the arrival.
+     Do not run the normal root page slide.
+  ====================================================== */
+
+  window.addEventListener("pageswap", (event) => {
+    if (event.activation?.navigationType !== "reload") {
+      return;
+    }
+
+    event.viewTransition?.skipTransition();
+  });
+
   if (reduceMotion.matches) {
     finishImmediately();
 
     return;
   }
+
+  /* =====================================================
+     HELPERS
+  ====================================================== */
+
+  const getActivation = () => window.navigation?.activation;
+
+  const isReload = () => {
+    const activation = getActivation();
+
+    if (activation?.navigationType === "reload") {
+      return true;
+    }
+
+    const navigationEntry = performance.getEntriesByType("navigation")[0];
+
+    return navigationEntry?.type === "reload";
+  };
+
+  const isDifferentInternalPage = (fromURL) => {
+    if (!fromURL) {
+      return false;
+    }
+
+    try {
+      const previous = new URL(fromURL);
+
+      const current = new URL(window.location.href);
+
+      return (
+        previous.origin === current.origin &&
+        previous.pathname !== current.pathname
+      );
+    } catch {
+      return false;
+    }
+  };
 
   /* =====================================================
      INTERNAL RETURN
@@ -1614,17 +1665,35 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
   window.addEventListener("pagereveal", (event) => {
     const transition = event.viewTransition;
 
-    const fromURL = window.navigation?.activation?.from?.url;
+    const activation = getActivation();
 
-    /*
-        A real cross-document transition into Home
-        always counts as an internal return.
+    const fromURL = activation?.from?.url;
 
-        This also protects us if browser referrer
-        handling differs during local testing.
-      */
+    /* -----------------------------------------------
+         RELOAD
+         Never reinterpret a reload as "return Home".
+      ------------------------------------------------ */
 
-    if (transition && fromURL) {
+    if (isReload()) {
+      document.documentElement.dataset.homeArrival = "fresh";
+
+      /*
+          Extra defensive skip on the incoming side.
+
+          The outgoing Home document already requests
+          the reload transition to be skipped.
+        */
+
+      transition?.skipTransition();
+
+      return;
+    }
+
+    /* -----------------------------------------------
+         GENUINE INTERNAL RETURN
+      ------------------------------------------------ */
+
+    if (transition && isDifferentInternalPage(fromURL)) {
       document.documentElement.dataset.homeArrival = "return";
 
       body.classList.add("home-intro-complete");
@@ -1650,7 +1719,7 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
   /*
     Two frames guarantee that the browser paints
     the deliberately hidden starting composition
-    before we begin the introduction.
+    before the introduction begins.
   */
 
   requestAnimationFrame(() => {
@@ -1660,9 +1729,9 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
   });
 
   /*
-    Once every element has settled, remove the
-    temporary animation state so normal hover
-    interactions regain complete ownership.
+    Once every element has settled, release all
+    temporary animation ownership so normal Home
+    interactions take over again.
   */
 
   window.setTimeout(() => {

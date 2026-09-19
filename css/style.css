@@ -1088,10 +1088,10 @@ body.menu-open .back-to-top {
 
   background: linear-gradient(
     90deg,
-    rgba(242, 243, 242, 0.92) 0%,
-    rgba(242, 243, 242, 0.72) 27%,
-    rgba(242, 243, 242, 0.16) 54%,
-    rgba(242, 243, 242, 0.02) 100%
+    rgba(242, 243, 242, 0.82) 0%,
+    rgba(242, 243, 242, 0.58) 27%,
+    rgba(242, 243, 242, 0.12) 54%,
+    rgba(242, 243, 242, 0.015) 100%
   );
 
   pointer-events: none;
@@ -1442,10 +1442,10 @@ body.menu-open .back-to-top {
   .home-hero-overlay {
     background: linear-gradient(
       180deg,
-      rgba(242, 243, 242, 0.96) 0%,
-      rgba(242, 243, 242, 0.82) 30%,
-      rgba(242, 243, 242, 0.25) 58%,
-      rgba(242, 243, 242, 0.05) 100%
+      rgba(242, 243, 242, 0.88) 0%,
+      rgba(242, 243, 242, 0.68) 30%,
+      rgba(242, 243, 242, 0.18) 58%,
+      rgba(242, 243, 242, 0.03) 100%
     );
   }
 
