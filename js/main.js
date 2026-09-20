@@ -1073,6 +1073,8 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
 
   const formStatus = document.querySelector("[data-contact-form-status]");
 
+  const submitButton = form.querySelector(".contact-submit");
+
   const fields = [...form.querySelectorAll("[data-contact-field]")];
 
   const controls = {
@@ -1526,15 +1528,20 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
   };
 
   /* =====================================================
-     SUBMIT
-  ====================================================== */
+   SUBMIT
+   Deliver all website enquiries to Simphiwe
+===================================================== */
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
     const result = validateForm();
 
-    if (!result.valid) {
-      event.preventDefault();
+    /* =================================================
+     VALIDATION FAILED
+  ================================================= */
 
+    if (!result.valid) {
       const invalidField = result.firstInvalidField;
 
       if (invalidField) {
@@ -1544,7 +1551,6 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
 
         invalidField.closest(".contact-field")?.scrollIntoView({
           behavior: reduceMotion.matches ? "auto" : "smooth",
-
           block: "center",
         });
       }
@@ -1552,26 +1558,135 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
       return;
     }
 
-    /*
-        The form UX and validation are now complete,
-        but no delivery service/backend has been
-        connected yet.
+    /* =================================================
+     EMAIL SUBJECT
+  ================================================= */
 
-        Prevent a fake submission while action="#".
-      */
+    const emailSubjects = {
+      accounting: "Accounting Enquiry — Mambodla Website",
+      tax: "Tax Enquiry — Mambodla Website",
+      payroll: "Payroll Enquiry — Mambodla Website",
+      advisory: "Business Advisory Enquiry — Mambodla Website",
+      "insight-contribution": "Insight Contribution — Mambodla Website",
+      other: "General Enquiry — Mambodla Website",
+      "": "Website Enquiry — Mambodla Professional Accountants",
+    };
 
-    const action = form.getAttribute("action");
+    /* =================================================
+     BUILD DELIVERY PAYLOAD
+  ================================================= */
 
-    if (!action || action === "#") {
-      event.preventDefault();
+    const payload = {
+      name: controls.name.value.trim(),
+      email: controls.email.value.trim(),
+      phone: controls.phone.value.trim(),
+      service: controls.service.value,
+      subject: controls.subject.value.trim(),
+      message: controls.message.value.trim(),
+
+      _subject: emailSubjects[activeIntent] || emailSubjects[""],
+
+      _replyto: controls.email.value.trim(),
+      _template: "table",
+    };
+
+    /* =================================================
+     SENDING STATE
+  ================================================= */
+
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+
+    if (submitLabel) {
+      submitLabel.textContent = "Sending…";
+    }
+
+    if (formStatus) {
+      formStatus.classList.remove("is-visible");
+      formStatus.textContent = "";
+    }
+
+    /* =================================================
+     SEND
+  ================================================= */
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/simphiwe@mambodla.co.za",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+
+          body: JSON.stringify(payload),
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Message delivery failed.");
+      }
+
+      /* ===============================================
+       SUCCESS
+    ================================================ */
+
+      form.reset();
+
+      activeIntent = "";
+
+      applyIntent("", false);
+
+      fields.forEach((field) => {
+        field.classList.remove("is-invalid");
+      });
+
+      Object.values(controls).forEach((control) => {
+        control?.removeAttribute("aria-invalid");
+      });
+
+      form.querySelectorAll("[data-contact-error]").forEach((error) => {
+        error.textContent = "";
+        error.hidden = true;
+      });
 
       if (formStatus) {
         formStatus.textContent =
-          "Everything looks good. Online message delivery still needs to be connected before this form can send enquiries.";
+          "Thank you. Your message has been sent successfully. We’ll be in touch soon.";
 
         requestAnimationFrame(() => {
           formStatus.classList.add("is-visible");
         });
+      }
+    } catch (error) {
+      /* ===============================================
+       DELIVERY FAILED
+    ================================================ */
+
+      if (formStatus) {
+        formStatus.textContent =
+          "We couldn’t send your message right now. Please try again, or email simphiwe@mambodla.co.za directly.";
+
+        requestAnimationFrame(() => {
+          formStatus.classList.add("is-visible");
+        });
+      }
+    } finally {
+      /* ===============================================
+       RESTORE BUTTON
+    ================================================ */
+
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+
+      if (submitLabel) {
+        const copy = intents[activeIntent] || intents[""];
+
+        submitLabel.textContent = copy.submit;
       }
     }
   });
