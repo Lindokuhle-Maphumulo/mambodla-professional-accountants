@@ -584,6 +584,10 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
 
   const emptyState = document.querySelector("[data-insights-empty]");
 
+  const taxResource = document.querySelector("[data-tax-resource]");
+
+  let taxResourceHideTimer = null;
+
   /* -----------------------------------------------------
      Run only on the Insights hub
   ----------------------------------------------------- */
@@ -795,6 +799,57 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
   };
 
   /* =====================================================
+   TAX RESOURCES
+   Visible only while Tax Updates owns the filter
+===================================================== */
+
+  const showTaxResource = () => {
+    if (!taxResource) {
+      return;
+    }
+
+    if (taxResourceHideTimer) {
+      window.clearTimeout(taxResourceHideTimer);
+
+      taxResourceHideTimer = null;
+    }
+
+    taxResource.hidden = false;
+
+    requestAnimationFrame(() => {
+      taxResource.classList.add("is-visible");
+    });
+  };
+
+  const hideTaxResource = (immediate = false) => {
+    if (!taxResource) {
+      return;
+    }
+
+    if (taxResourceHideTimer) {
+      window.clearTimeout(taxResourceHideTimer);
+
+      taxResourceHideTimer = null;
+    }
+
+    taxResource.classList.remove("is-visible");
+
+    if (immediate || reduceMotion.matches) {
+      taxResource.hidden = true;
+
+      return;
+    }
+
+    taxResourceHideTimer = window.setTimeout(() => {
+      if (!taxResource.classList.contains("is-visible")) {
+        taxResource.hidden = true;
+      }
+
+      taxResourceHideTimer = null;
+    }, DETAIL_EXIT_DURATION);
+  };
+
+  /* =====================================================
      FILTER CATEGORY
   ====================================================== */
 
@@ -817,6 +872,14 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
     clearCardMotion();
 
     beginHideEditorialContent();
+
+    /*
+     * The Tax Guide belongs only to Tax Updates.
+     */
+
+    if (category !== "tax-updates") {
+      hideTaxResource();
+    }
 
     setActiveCategory(category);
 
@@ -901,6 +964,15 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
 
         showEditorialDetail(category);
 
+        /*
+         * Tax Updates receives one additional layer:
+         * the Mambodla Tax Resource library.
+         */
+
+        if (category === "tax-updates") {
+          showTaxResource();
+        }
+
         window.setTimeout(() => {
           matchingCard.classList.remove("is-filter-entering");
         }, CARD_RETURN_DURATION);
@@ -941,6 +1013,8 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
     beginHideEditorialContent();
 
     beginHideFilterContext();
+
+    hideTaxResource();
 
     /*
       At the same time the navy active category

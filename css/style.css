@@ -6299,6 +6299,513 @@ html[data-home-arrival="return"]
 }
 
 /* =========================================================
+   INSIGHTS — TAX RESOURCES
+   COMPACT PROFESSIONAL RESOURCE LIBRARY
+========================================================= */
+
+.insights-tax-resources {
+  width: calc(100% - 2rem);
+
+  margin-inline: auto;
+
+  padding: clamp(1.75rem, 3vw, 2.5rem) var(--page-padding)
+    clamp(2rem, 3.5vw, 2.75rem);
+
+  border-top: 1px solid rgba(11, 34, 57, 0.07);
+
+  background-color: var(--color-background);
+
+  opacity: 0;
+
+  transform: translate3d(0, 14px, 0);
+
+  transition:
+    opacity var(--motion-slow) var(--motion-ease),
+    transform var(--motion-slow) var(--motion-ease);
+}
+
+.insights-tax-resources[hidden] {
+  display: none;
+}
+
+.insights-tax-resources.is-visible {
+  opacity: 1;
+
+  transform: translate3d(0, 0, 0);
+}
+
+/* =========================================================
+   TAX RESOURCES — HEADING
+========================================================= */
+
+.insights-tax-resources-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(280px, 0.7fr);
+
+  align-items: end;
+
+  gap: clamp(2rem, 5vw, 5rem);
+
+  width: min(100%, 920px);
+
+  margin-inline: auto;
+  margin-bottom: 1.35rem;
+}
+
+.insights-tax-resources-eyebrow {
+  margin: 0 0 0.5rem;
+
+  color: var(--color-gold);
+
+  font-size: 0.64rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.insights-tax-resources-title {
+  margin: 0;
+
+  color: var(--color-navy);
+
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-weight: 500;
+
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.insights-tax-resources-intro {
+  max-width: 400px;
+
+  margin: 0;
+
+  padding-left: 1rem;
+
+  border-left: 1px solid rgba(185, 147, 82, 0.4);
+
+  color: var(--color-muted);
+
+  font-size: clamp(0.68rem, 0.78vw, 0.76rem);
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TAX RESOURCES — LIBRARY
+========================================================= */
+
+.insights-tax-resources-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 1rem;
+
+  width: min(100%, 920px);
+
+  margin-inline: auto;
+}
+
+/* =========================================================
+   TAX RESOURCE CARD
+========================================================= */
+
+.insights-tax-resource-card {
+  display: grid;
+
+  grid-template-columns:
+    104px
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+
+  min-width: 0;
+
+  padding: 1rem clamp(1rem, 2vw, 1.4rem);
+
+  border: 1px solid rgba(185, 147, 82, 0.1);
+
+  border-radius: var(--radius-card);
+
+  background: rgba(255, 255, 255, 0.45);
+
+  box-shadow: none;
+
+  transition:
+    transform var(--transition-medium),
+    box-shadow var(--transition-medium),
+    border-color var(--transition-medium),
+    background var(--transition-medium);
+}
+
+.insights-tax-resource-card:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(185, 147, 82, 0.32);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(252, 250, 246, 0.78) 100%
+  );
+
+  box-shadow: 0 10px 24px rgba(11, 34, 57, 0.05);
+}
+
+/* =========================================================
+   TAX RESOURCE — SMALL PUBLICATION THUMBNAIL
+========================================================= */
+
+.insights-tax-resource-cover-link {
+  display: block;
+
+  width: 104px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(185, 147, 82, 0.3);
+
+  background-color: var(--color-white);
+
+  box-shadow: 0 6px 14px rgba(11, 34, 57, 0.06);
+
+  transition:
+    transform var(--transition-medium),
+    box-shadow var(--transition-medium);
+}
+
+.insights-tax-resource-cover {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition: transform var(--transition-medium);
+}
+
+.insights-tax-resource-cover-link:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 16px rgba(11, 34, 57, 0.08);
+}
+
+.insights-tax-resource-cover-link:hover .insights-tax-resource-cover {
+  transform: scale(1.008);
+}
+
+/* =========================================================
+   TAX RESOURCE — CONTENT
+========================================================= */
+
+.insights-tax-resource-content {
+  min-width: 0;
+}
+
+.insights-tax-resource-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-bottom: 0.4rem;
+}
+
+.insights-tax-resource-type {
+  margin: 0;
+
+  color: var(--color-gold);
+
+  font-size: 0.62rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.insights-tax-resource-edition {
+  color: rgba(11, 34, 57, 0.58);
+
+  font-size: 0.6rem;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+}
+
+.insights-tax-resource-content h3 {
+  margin: 0;
+
+  color: var(--color-navy);
+
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-weight: 500;
+
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+
+.insights-tax-resource-description {
+  max-width: 610px;
+
+  margin: 0.55rem 0 0;
+
+  color: var(--color-muted);
+
+  font-size: clamp(0.68rem, 0.78vw, 0.75rem);
+
+  line-height: 1.65;
+}
+
+/* =========================================================
+   TAX RESOURCE — META
+========================================================= */
+
+.insights-tax-resource-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0.55rem;
+
+  margin-top: 0.7rem;
+
+  color: rgba(11, 34, 57, 0.58);
+
+  font-size: 0.6rem;
+}
+
+.insights-tax-resource-meta > span[aria-hidden="true"] {
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background-color: rgba(185, 147, 82, 0.7);
+}
+
+/* =========================================================
+   TAX RESOURCE — ACTIONS
+========================================================= */
+
+.insights-tax-resource-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1.1rem;
+
+  margin-top: 0.85rem;
+}
+
+.insights-tax-resource-open,
+.insights-tax-resource-download {
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  gap: 0.55rem;
+
+  font-size: 0.66rem;
+  font-weight: 500;
+
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.insights-tax-resource-open {
+  color: var(--color-navy);
+}
+
+.insights-tax-resource-open span:last-child,
+.insights-tax-resource-download span:last-child {
+  color: var(--color-gold);
+
+  transition: transform var(--transition-fast);
+}
+
+.insights-tax-resource-open:hover {
+  color: var(--color-gold);
+}
+
+.insights-tax-resource-download {
+  color: var(--color-gold);
+}
+
+.insights-tax-resource-download:hover {
+  color: var(--color-navy);
+}
+
+.insights-tax-resource-open:hover span:last-child {
+  transform: translateX(3px);
+}
+
+.insights-tax-resource-download:hover span:last-child {
+  transform: translateY(2px);
+}
+
+/* =========================================================
+   TAX RESOURCES — SHARED CTA
+========================================================= */
+
+.insights-tax-resources-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 0.55rem;
+
+  width: min(100%, 920px);
+
+  margin: 0.9rem auto 0;
+}
+
+.insights-tax-resources-footer p {
+  margin: 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.62rem;
+}
+
+.insights-tax-resources-footer a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.45rem;
+
+  color: var(--color-navy);
+
+  font-size: 0.64rem;
+  font-weight: 600;
+
+  transition: color var(--transition-fast);
+}
+
+.insights-tax-resources-footer a > span:last-child {
+  color: var(--color-gold);
+
+  transition: transform var(--transition-fast);
+}
+
+.insights-tax-resources-footer a:hover {
+  color: var(--color-gold);
+}
+
+.insights-tax-resources-footer a:hover > span:last-child {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   TAX RESOURCES — TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .insights-tax-resources-heading {
+    grid-template-columns: 1fr;
+
+    align-items: start;
+
+    gap: 1rem;
+  }
+
+  .insights-tax-resources-intro {
+    max-width: 520px;
+  }
+}
+
+/* =========================================================
+   TAX RESOURCES — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .insights-tax-resources {
+    width: calc(100% - 1rem);
+
+    padding-right: var(--page-padding);
+    padding-left: var(--page-padding);
+  }
+
+  .insights-tax-resource-card {
+    grid-template-columns:
+      78px
+      minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 1rem;
+
+    padding: 0.9rem;
+  }
+
+  .insights-tax-resource-cover-link {
+    width: 78px;
+  }
+
+  .insights-tax-resource-header {
+    align-items: flex-start;
+  }
+
+  .insights-tax-resource-description {
+    font-size: 0.67rem;
+  }
+
+  .insights-tax-resource-meta {
+    gap: 0.45rem;
+  }
+
+  .insights-tax-resources-footer {
+    align-items: flex-end;
+    flex-direction: column;
+
+    gap: 0.25rem;
+  }
+}
+
+/* =========================================================
+   TAX RESOURCES — VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .insights-tax-resource-card {
+    grid-template-columns: 64px minmax(0, 1fr);
+
+    gap: 0.8rem;
+  }
+
+  .insights-tax-resource-cover-link {
+    width: 64px;
+  }
+
+  .insights-tax-resource-edition {
+    display: none;
+  }
+}
+
+/* =========================================================
+   TAX RESOURCES — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .insights-tax-resources,
+  .insights-tax-resource-card,
+  .insights-tax-resource-cover-link,
+  .insights-tax-resource-cover {
+    transition: none;
+  }
+}
+
+/* =========================================================
    INSIGHTS — CONTRIBUTION CTA
 ========================================================= */
 
