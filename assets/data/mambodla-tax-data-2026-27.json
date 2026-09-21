@@ -1,0 +1,338 @@
+{
+  "publication": "Mambodla Tax Guide 2026/27",
+  "tax_year": 2027,
+  "period": {
+    "start": "2026-03-01",
+    "end": "2027-02-28"
+  },
+  "verified_on": "2026-09-20",
+  "individuals": {
+    "brackets": [
+      [
+        0,
+        245100,
+        0.18,
+        0,
+        0
+      ],
+      [
+        245100,
+        383100,
+        0.26,
+        44118,
+        245100
+      ],
+      [
+        383100,
+        530200,
+        0.31,
+        79998,
+        383100
+      ],
+      [
+        530200,
+        695800,
+        0.36,
+        125599,
+        530200
+      ],
+      [
+        695800,
+        887000,
+        0.39,
+        185215,
+        695800
+      ],
+      [
+        887000,
+        1878600,
+        0.41,
+        259783,
+        887000
+      ],
+      [
+        1878600,
+        null,
+        0.45,
+        666339,
+        1878600
+      ]
+    ],
+    "rebates": {
+      "primary": 17820,
+      "secondary_65_plus": 9765,
+      "tertiary_75_plus": 3249
+    },
+    "thresholds": {
+      "under_65": 99000,
+      "65_to_74": 153250,
+      "75_plus": 171300
+    },
+    "interest_exemption": {
+      "under_65": 23800,
+      "65_plus": 34500
+    },
+    "medical_credit_monthly": {
+      "first_person": 376,
+      "second_person": 376,
+      "additional_dependant": 254
+    },
+    "retirement_contribution": {
+      "percentage": 0.275,
+      "annual_cap": 430000,
+      "additional_cap": "taxable_income_before_taxable_capital_gain"
+    },
+    "tax_free_investment": {
+      "annual_limit": 46000,
+      "lifetime_limit": 500000,
+      "excess_penalty_rate": 0.4
+    }
+  },
+  "retirement_lump_sums": {
+    "withdrawal": [
+      [
+        0,
+        27500,
+        0.0,
+        0,
+        0
+      ],
+      [
+        27500,
+        726000,
+        0.18,
+        0,
+        27500
+      ],
+      [
+        726000,
+        1089000,
+        0.27,
+        125730,
+        726000
+      ],
+      [
+        1089000,
+        null,
+        0.36,
+        223740,
+        1089000
+      ]
+    ],
+    "retirement_or_severance": [
+      [
+        0,
+        550000,
+        0.0,
+        0,
+        0
+      ],
+      [
+        550000,
+        770000,
+        0.18,
+        0,
+        550000
+      ],
+      [
+        770000,
+        1155000,
+        0.27,
+        39600,
+        770000
+      ],
+      [
+        1155000,
+        null,
+        0.36,
+        143550,
+        1155000
+      ]
+    ]
+  },
+  "business": {
+    "company_rate": 0.27,
+    "trust_rate": 0.45,
+    "sbc_brackets": [
+      [
+        0,
+        99000,
+        0.0,
+        0,
+        0
+      ],
+      [
+        99000,
+        365000,
+        0.07,
+        0,
+        99000
+      ],
+      [
+        365000,
+        550000,
+        0.21,
+        18620,
+        365000
+      ],
+      [
+        550000,
+        null,
+        0.27,
+        57470,
+        550000
+      ]
+    ],
+    "turnover_tax_threshold": 2300000,
+    "turnover_tax": [
+      [
+        0,
+        600000,
+        0.0,
+        0,
+        0
+      ],
+      [
+        600000,
+        950000,
+        0.01,
+        0,
+        600000
+      ],
+      [
+        950000,
+        1400000,
+        0.02,
+        3500,
+        950000
+      ],
+      [
+        1400000,
+        2300000,
+        0.03,
+        12500,
+        1400000
+      ]
+    ],
+    "turnover_tax_effective_from": "2026-04-01"
+  },
+  "vat": {
+    "standard_rate": 0.15,
+    "compulsory_threshold": 2300000,
+    "voluntary_min": 120000,
+    "thresholds_effective_from": "2026-04-01"
+  },
+  "cgt": {
+    "max_effective_rates": {
+      "individuals_special_trusts": 0.18,
+      "companies": 0.216,
+      "other_trusts": 0.36
+    },
+    "annual_exclusion": 50000,
+    "year_of_death_exclusion": 440000,
+    "primary_residence_exclusion": 3000000,
+    "small_business_exclusion": 2700000,
+    "small_business_market_value_limit": 15000000
+  },
+  "other": {
+    "dividends_tax": 0.2,
+    "withholding_royalties": 0.15,
+    "withholding_interest_nonresident": 0.15,
+    "foreign_entertainers_sportspersons": 0.15,
+    "nonresident_property_withholding": {
+      "individual": 0.075,
+      "company": 0.1,
+      "trust": 0.15
+    },
+    "donations_tax": {
+      "up_to_30m": 0.2,
+      "above_30m": 0.25,
+      "annual_natural_person_exemption": 150000,
+      "non_natural_casual_gifts": 20000,
+      "cumulative_threshold_measurement_from": "2018-03-01"
+    },
+    "estate_duty": {
+      "up_to_30m": 0.2,
+      "above_30m": 0.25,
+      "basic_deduction": 3500000
+    },
+    "securities_transfer_tax": 0.0025,
+    "skills_development_levy": 0.01,
+    "sdl_remuneration_exemption_threshold": 500000,
+    "transfer_duty": {
+      "effective_from": "2026-04-01",
+      "brackets": [
+        [
+          0,
+          1210000,
+          0.0,
+          0,
+          0
+        ],
+        [
+          1210000,
+          1663800,
+          0.03,
+          0,
+          1210000
+        ],
+        [
+          1663800,
+          2329300,
+          0.06,
+          13614,
+          1663800
+        ],
+        [
+          2329300,
+          2994800,
+          0.08,
+          53544,
+          2329300
+        ],
+        [
+          2994800,
+          13310000,
+          0.11,
+          106784,
+          2994800
+        ],
+        [
+          13310000,
+          null,
+          0.13,
+          1241456,
+          13310000
+        ]
+      ]
+    },
+    "uif": {
+      "employer_rate": 0.01,
+      "employee_rate": 0.01,
+      "note": "subject to the statutory remuneration ceiling"
+    }
+  },
+  "travel_and_subsistence": {
+    "reimbursive_rate_per_km": 4.95,
+    "meals_and_incidentals_per_day": 595,
+    "incidentals_only_per_day": 184,
+    "company_car_monthly_percent": 0.035,
+    "company_car_maintenance_plan_percent": 0.0325
+  },
+  "sars_interest_rates": {
+    "official_fringe_benefit": [
+      {
+        "from": "2025-12-01",
+        "to": "2026-05-31",
+        "rate": 0.0775
+      },
+      {
+        "from": "2026-06-01",
+        "to": null,
+        "rate": 0.08
+      }
+    ],
+    "late_underpayment_from_2026_03_01": 0.1025,
+    "refund_provisional_from_2026_03_01": 0.0625
+  }
+}
