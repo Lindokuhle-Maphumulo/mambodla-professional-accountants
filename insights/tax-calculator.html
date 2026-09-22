@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Estimate individual South African income tax for the 2026/27 tax year with the Mambodla Tax Calculator."
+    />
+
+    <title>Tax Calculator 2026/27 | Mambodla Professional Accountants</title>
+
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+    </style>
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script src="../js/transition-nav.js"></script>
+    <script src="../js/insight-transitions.js"></script>
+
+    <link rel="expect" href="#page-lead" blocking="render" />
+  </head>
+
+  <body class="tax-calculator-page-body">
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          href="../index.html"
+          class="brand"
+          aria-label="Mambodla Professional Accountants home"
+        >
+          <img
+            src="../assets/logo/mambodla-logo.svg"
+            alt="Mambodla Professional Accountants"
+            class="brand-logo"
+          />
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="../index.html" class="nav-link"> Home </a>
+
+          <a href="../about.html" class="nav-link"> About </a>
+
+          <a href="../services.html" class="nav-link"> Services </a>
+
+          <a
+            href="../insights.html"
+            class="nav-link active"
+            aria-current="page"
+          >
+            Insights
+          </a>
+
+          <a href="../contact.html" class="nav-link"> Contact </a>
+        </nav>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- =================================================
+           MOBILE NAVIGATION
+      ================================================== -->
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation">
+        <div class="mobile-nav-panel">
+          <div class="mobile-nav-links">
+            <a href="../index.html" class="mobile-nav-link"> Home </a>
+
+            <a href="../about.html" class="mobile-nav-link"> About </a>
+
+            <a href="../services.html" class="mobile-nav-link"> Services </a>
+
+            <a
+              href="../insights.html"
+              class="mobile-nav-link active"
+              aria-current="page"
+            >
+              Insights
+            </a>
+
+            <a href="../contact.html" class="mobile-nav-link"> Contact </a>
+          </div>
+
+          <div class="mobile-nav-social">
+            <p>Connect with us</p>
+
+            <div class="mobile-nav-social-links">
+              <a
+                href="https://www.facebook.com/share/p/1GCcvotiUQ/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on Facebook"
+              >
+                <img src="../assets/social/facebook.svg" alt="" />
+              </a>
+
+              <a
+                href="https://x.com/MambodlaA"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on X"
+              >
+                <img src="../assets/social/x.svg" alt="" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/mambodla-professional-accountants/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on LinkedIn"
+              >
+                <img src="../assets/social/linkedin.svg" alt="" />
+              </a>
+
+              <a
+                href="https://wa.me/27670776562"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mambodla on WhatsApp"
+              >
+                <img src="../assets/social/whatsapp.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =====================================================
+         TAX CALCULATOR PAGE
+    ====================================================== -->
+
+    <main class="tax-calculator-page">
+      <!-- =================================================
+           INTRODUCTION
+      ================================================== -->
+
+      <section
+        class="tax-calculator-intro"
+        id="page-lead"
+        aria-labelledby="tax-calculator-title"
+      >
+        <div class="tax-calculator-intro-inner">
+          <a href="../insights.html" class="tax-calculator-back">
+            <span aria-hidden="true">←</span>
+            <span>Back to Insights</span>
+          </a>
+
+          <div class="tax-calculator-intro-grid">
+            <div class="tax-calculator-intro-copy">
+              <p class="tax-calculator-eyebrow">Mambodla Tax Resources</p>
+
+              <h1 class="tax-calculator-title" id="tax-calculator-title">
+                <span>Estimate your individual</span>
+                <span>income tax.</span>
+                <span class="gold-text">2026 / 27</span>
+              </h1>
+
+              <div class="tax-calculator-title-rule" aria-hidden="true"></div>
+
+              <p class="tax-calculator-description">
+                A practical estimate of South African individual normal tax
+                using annual taxable income, applicable age rebates and the
+                standard medical scheme fees tax credit.
+              </p>
+            </div>
+
+            <div
+              class="tax-calculator-period"
+              aria-label="Tax year information"
+            >
+              <p class="tax-calculator-period-label">South Africa</p>
+
+              <strong>2027 year of assessment</strong>
+
+              <span>1 March 2026 — 28 February 2027</span>
+
+              <span class="tax-calculator-period-verified">
+                Rates verified 20 September 2026
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+           CALCULATOR WORKSPACE
+      ================================================== -->
+
+      <section
+        class="tax-calculator-workspace-section"
+        aria-labelledby="tax-calculator-workspace-title"
+      >
+        <h2 class="sr-only" id="tax-calculator-workspace-title">
+          Individual income tax estimate
+        </h2>
+
+        <div class="tax-calculator-workspace">
+          <!-- ===============================================
+               INPUT PANEL
+          ================================================ -->
+
+          <div class="tax-calculator-input-panel">
+            <div class="tax-calculator-panel-heading">
+              <p class="tax-calculator-panel-eyebrow">Your details</p>
+
+              <h2>Build your estimate.</h2>
+
+              <p>
+                Enter the annual taxable income and personal details that apply
+                to the estimate.
+              </p>
+            </div>
+
+            <form
+              class="tax-calculator-form"
+              data-tax-calculator-form
+              data-tax-data-url="../assets/data/mambodla-tax-data-2026-27.json"
+              novalidate
+            >
+              <!-- ===========================================
+                   TAXABLE INCOME
+              ============================================ -->
+
+              <div class="tax-calculator-field" data-tax-field="income">
+                <label for="taxable-income">Annual taxable income</label>
+
+                <div class="tax-calculator-money-input">
+                  <span aria-hidden="true">R</span>
+
+                  <input
+                    id="taxable-income"
+                    name="taxable-income"
+                    type="text"
+                    inputmode="decimal"
+                    autocomplete="off"
+                    placeholder="500 000"
+                    aria-describedby="taxable-income-help taxable-income-error"
+                    data-tax-input="income"
+                  />
+                </div>
+
+                <p class="tax-calculator-field-help" id="taxable-income-help">
+                  Use taxable income after allowable deductions. Include taxable
+                  fringe benefits already reflected in taxable income.
+                </p>
+
+                <p
+                  class="tax-calculator-field-error"
+                  id="taxable-income-error"
+                  data-tax-error="income"
+                  aria-live="polite"
+                  hidden
+                ></p>
+              </div>
+
+              <!-- ===========================================
+                   AGE BAND
+              ============================================ -->
+
+              <div class="tax-calculator-field" data-tax-field="age">
+                <label for="tax-age-band">Age band</label>
+
+                <div class="tax-calculator-select-wrap">
+                  <select
+                    id="tax-age-band"
+                    name="tax-age-band"
+                    data-tax-input="age"
+                    aria-describedby="tax-age-band-help"
+                  >
+                    <option value="under_65">Under 65</option>
+                    <option value="65_to_74">65 to 74</option>
+                    <option value="75_plus">75 or older</option>
+                  </select>
+                </div>
+
+                <p class="tax-calculator-field-help" id="tax-age-band-help">
+                  Age determines which individual rebates and tax threshold
+                  apply.
+                </p>
+              </div>
+
+              <!-- ===========================================
+                   MEDICAL SCHEME MEMBERS
+              ============================================ -->
+
+              <div class="tax-calculator-field" data-tax-field="medical-people">
+                <label for="medical-people"
+                  >People covered by a medical scheme</label
+                >
+
+                <input
+                  id="medical-people"
+                  name="medical-people"
+                  type="number"
+                  min="0"
+                  step="1"
+                  value="0"
+                  inputmode="numeric"
+                  aria-describedby="medical-people-help medical-people-error"
+                  data-tax-input="medical-people"
+                />
+
+                <p class="tax-calculator-field-help" id="medical-people-help">
+                  Include yourself and qualifying dependants covered for the
+                  selected period. If cover changed during the year, treat this
+                  as a simplified estimate.
+                </p>
+
+                <p
+                  class="tax-calculator-field-error"
+                  id="medical-people-error"
+                  data-tax-error="medical-people"
+                  aria-live="polite"
+                  hidden
+                ></p>
+              </div>
+
+              <!-- ===========================================
+                   MEDICAL MONTHS
+              ============================================ -->
+
+              <div
+                class="tax-calculator-field is-disabled"
+                data-tax-field="medical-months"
+              >
+                <label for="medical-months">Months covered</label>
+
+                <div class="tax-calculator-select-wrap">
+                  <select
+                    id="medical-months"
+                    name="medical-months"
+                    data-tax-input="medical-months"
+                    disabled
+                  >
+                    <option value="12" selected>12 months</option>
+                    <option value="11">11 months</option>
+                    <option value="10">10 months</option>
+                    <option value="9">9 months</option>
+                    <option value="8">8 months</option>
+                    <option value="7">7 months</option>
+                    <option value="6">6 months</option>
+                    <option value="5">5 months</option>
+                    <option value="4">4 months</option>
+                    <option value="3">3 months</option>
+                    <option value="2">2 months</option>
+                    <option value="1">1 month</option>
+                  </select>
+                </div>
+
+                <p class="tax-calculator-field-help">
+                  This becomes relevant once at least one person is covered.
+                </p>
+              </div>
+
+              <!-- ===========================================
+                   ACTIONS
+              ============================================ -->
+
+              <div class="tax-calculator-form-actions">
+                <button
+                  class="tax-calculator-submit"
+                  type="submit"
+                  data-tax-calculate
+                  disabled
+                >
+                  <span data-tax-calculate-label>Loading tax data…</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+
+                <button
+                  class="tax-calculator-reset"
+                  type="button"
+                  data-tax-reset
+                >
+                  Reset
+                </button>
+              </div>
+
+              <p
+                class="tax-calculator-form-status"
+                data-tax-form-status
+                role="status"
+                aria-live="polite"
+              ></p>
+
+              <p class="tax-calculator-data-note">
+                Calculations use the Mambodla 2026/27 verified tax dataset.
+              </p>
+            </form>
+          </div>
+
+          <!-- ===============================================
+               RESULTS PANEL
+          ================================================ -->
+
+          <div class="tax-calculator-result-panel" aria-live="polite">
+            <!-- Empty state -->
+
+            <div class="tax-calculator-empty-result" data-tax-results-empty>
+              <p class="tax-calculator-result-eyebrow">Estimated tax</p>
+
+              <div class="tax-calculator-empty-mark" aria-hidden="true">—</div>
+
+              <h2>Your estimate will appear here.</h2>
+
+              <p>
+                Enter your taxable income and details, then calculate to see the
+                estimated annual normal tax and a transparent breakdown.
+              </p>
+
+              <div class="tax-calculator-privacy-note">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+                </svg>
+
+                <span>
+                  Your calculation stays in this browser and is not submitted to
+                  Mambodla.
+                </span>
+              </div>
+            </div>
+
+            <!-- Calculated state -->
+
+            <div class="tax-calculator-results" data-tax-results hidden>
+              <div class="tax-calculator-result-primary">
+                <p class="tax-calculator-result-eyebrow">
+                  Estimated annual normal tax
+                </p>
+
+                <output
+                  class="tax-calculator-result-amount"
+                  data-result="annual-tax"
+                  aria-label="Estimated annual normal tax"
+                >
+                  R 0
+                </output>
+
+                <div class="tax-calculator-result-monthly">
+                  <span>Monthly equivalent</span>
+                  <strong data-result="monthly-tax">R 0.00</strong>
+                </div>
+              </div>
+
+              <div class="tax-calculator-result-rule" aria-hidden="true"></div>
+
+              <dl class="tax-calculator-metrics">
+                <div>
+                  <dt>Effective tax rate</dt>
+                  <dd data-result="effective-rate">0.00%</dd>
+                </div>
+
+                <div>
+                  <dt>Marginal tax rate</dt>
+                  <dd data-result="marginal-rate">18%</dd>
+                </div>
+
+                <div>
+                  <dt>Tax threshold</dt>
+                  <dd data-result="threshold">R 99 000</dd>
+                </div>
+              </dl>
+
+              <div class="tax-calculator-result-rule" aria-hidden="true"></div>
+
+              <div class="tax-calculator-breakdown">
+                <div class="tax-calculator-breakdown-heading">
+                  <p>Calculation breakdown</p>
+                  <span>2026 / 27</span>
+                </div>
+
+                <dl>
+                  <div>
+                    <dt>Tax before rebates</dt>
+                    <dd data-result="tax-before-rebates">R 0</dd>
+                  </div>
+
+                  <div>
+                    <dt>Primary rebate available</dt>
+                    <dd data-result="primary-rebate">R 17 820</dd>
+                  </div>
+
+                  <div data-result-row="secondary-rebate" hidden>
+                    <dt>Secondary rebate available</dt>
+                    <dd data-result="secondary-rebate">R 9 765</dd>
+                  </div>
+
+                  <div data-result-row="tertiary-rebate" hidden>
+                    <dt>Tertiary rebate available</dt>
+                    <dd data-result="tertiary-rebate">R 3 249</dd>
+                  </div>
+
+                  <div>
+                    <dt>Tax after age rebates</dt>
+                    <dd data-result="tax-after-rebates">R 0</dd>
+                  </div>
+
+                  <div>
+                    <dt>Standard medical credit available</dt>
+                    <dd data-result="medical-credit">R 0</dd>
+                  </div>
+
+                  <div class="tax-calculator-breakdown-total">
+                    <dt>Estimated annual normal tax</dt>
+                    <dd data-result="annual-tax-breakdown">R 0</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <p class="tax-calculator-result-note">
+                Rebates and standard medical credits do not reduce this estimate
+                below R0. Additional Medical Expenses Tax Credit (AMTC) is not
+                included.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+           METHODOLOGY + PROFESSIONAL CTA
+      ================================================== -->
+
+      <section
+        class="tax-calculator-notes"
+        aria-labelledby="tax-calculator-notes-title"
+      >
+        <div class="tax-calculator-notes-copy">
+          <p class="tax-calculator-notes-eyebrow">About this estimate</p>
+
+          <h2 id="tax-calculator-notes-title">
+            A useful estimate, not a tax assessment.
+          </h2>
+
+          <p>
+            The calculator uses the 2026/27 individual tax brackets, applicable
+            age rebates and the standard Medical Scheme Fees Tax Credit. It does
+            not calculate PAYE withholding, UIF, Additional Medical Expenses Tax
+            Credit, capital gains tax, lump-sum tax or the value of fringe
+            benefits and deductions. The taxable income entered should already
+            reflect relevant inclusions and allowable deductions.
+          </p>
+
+          <p class="tax-calculator-disclaimer">
+            This calculator is intended for general informational purposes only.
+            It does not constitute a SARS assessment or accounting, tax,
+            financial or other professional advice. Actual tax outcomes depend
+            on individual circumstances and may differ from this estimate.
+          </p>
+        </div>
+
+        <div class="tax-calculator-advice">
+          <p>Need clarity about your tax position?</p>
+
+          <h2>Turn the estimate into a proper tax conversation.</h2>
+
+          <a href="../contact.html?enquiry=tax">
+            <span>Talk to Mambodla</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         SITE FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-copyright">
+          <p>
+            &copy;
+            <span id="current-year"></span>
+            Mambodla Professional Accountants
+          </p>
+        </div>
+
+        <div class="footer-legal">
+          <a href="#"> Privacy Policy </a>
+
+          <a href="#"> Terms &amp; Conditions </a>
+        </div>
+
+        <div class="footer-social" aria-label="Social media links">
+          <a
+            href="https://www.facebook.com/share/p/1GCcvotiUQ/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on Facebook"
+          >
+            <img src="../assets/social/facebook.svg" alt="" />
+          </a>
+
+          <a
+            href="https://x.com/MambodlaA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on X"
+          >
+            <img src="../assets/social/x.svg" alt="" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/mambodla-professional-accountants/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Mambodla on LinkedIn"
+          >
+            <img src="../assets/social/linkedin.svg" alt="" />
+          </a>
+
+          <a
+            href="https://wa.me/27670776562"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact Mambodla on WhatsApp"
+          >
+            <img src="../assets/social/whatsapp.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/main.js"></script>
+    <script src="../js/tax-calculator.js"></script>
+  </body>
+</html>
