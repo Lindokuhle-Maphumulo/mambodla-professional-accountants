@@ -44,7 +44,7 @@
   --motion-standard: 300ms;
   --motion-slow: 500ms;
   --motion-ambient: 3200ms;
-  --motion-page: 620ms;
+  --motion-page: 720ms;
 
   --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 
@@ -247,7 +247,7 @@ html.nav-handoff .mobile-nav-link.nav-transition-active {
     The destination navigation becomes the final
     settling element of the Insights composition.
 
-    360ms + 260ms = 620ms page transition.
+    360ms + 260ms = 720ms page transition.
 */
 
 ::view-transition-new(insights-navigation) {
@@ -473,7 +473,7 @@ html.nav-handoff .mobile-nav-link.nav-transition-active {
 }
 
 .brand-logo {
-  width: 92px;
+  width: 78px;
   height: auto;
 }
 

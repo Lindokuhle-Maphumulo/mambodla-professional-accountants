@@ -359,9 +359,9 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
       {
         root: null,
 
-        rootMargin: "0px 0px -8% 0px",
+        rootMargin: "0px 0px -4% 0px",
 
-        threshold: 0.12,
+        threshold: 0.08,
       },
     );
 

@@ -4,12 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      name="description"
-      content="Mambodla Professional Accountants provides professional accounting, tax, payroll and business advisory services."
-    />
+    <meta name="description" content="Mambodla Professional Accountants provides professional accounting, tax, payroll and business advisory services." />
 
     <title>Mambodla Professional Accountants</title>
+    <!-- MAMBODLA PRE-LAUNCH META START -->
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0b2239" />
+    <link rel="canonical" href="https://mambodla.co.za/" />
+    <meta property="og:site_name" content="Mambodla Professional Accountants" />
+    <meta property="og:locale" content="en_ZA" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mambodla Professional Accountants" />
+    <meta property="og:description" content="Mambodla Professional Accountants provides professional accounting, tax, payroll and business advisory services." />
+    <meta property="og:url" content="https://mambodla.co.za/" />
+    <meta property="og:image" content="https://mambodla.co.za/assets/images/home/home-hero.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mambodla Professional Accountants" />
+    <meta name="twitter:description" content="Mambodla Professional Accountants provides professional accounting, tax, payroll and business advisory services." />
+    <meta name="twitter:image" content="https://mambodla.co.za/assets/images/home/home-hero.png" />
+    <link rel="icon" href="assets/logo/mambodla-logo-icon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="preload" as="image" href="assets/images/home/home-hero.png" fetchpriority="high" />
+    <!-- MAMBODLA PRE-LAUNCH META END -->
 
     <style>
       @view-transition {
@@ -53,6 +71,7 @@
     </script>
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/prelaunch.css" />
 
     <script src="js/transition-nav.js"></script>
 
@@ -138,7 +157,7 @@
       </div>
 
       <!-- Mobile Navigation -->
-      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation">
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true" inert>
         <div class="mobile-nav-panel">
           <div class="mobile-nav-links">
             <a
@@ -272,7 +291,7 @@
               <span class="home-service-arrow" aria-hidden="true"> → </span>
             </a>
 
-            <a href="services.html#tax" class="home-service-card">
+            <a href="services.html#audit-tax" class="home-service-card">
               <div class="home-service-icon">
                 <img src="assets/icons/tax-services.svg" alt="" />
               </div>
@@ -298,7 +317,7 @@
               <span class="home-service-arrow" aria-hidden="true"> → </span>
             </a>
 
-            <a href="services.html#advisory" class="home-service-card">
+            <a href="services.html#business-advisory" class="home-service-card">
               <div class="home-service-icon">
                 <img src="assets/icons/business-advisory.svg" alt="" />
               </div>
@@ -326,8 +345,8 @@
         </div>
 
         <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
         </div>
 
         <div class="footer-social" aria-label="Social media links">
@@ -371,5 +390,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+      <script src="js/prelaunch.js"></script>
   </body>
 </html>

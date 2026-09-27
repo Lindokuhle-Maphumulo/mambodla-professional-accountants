@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mambodla.co.za/sitemap.xml
