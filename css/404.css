@@ -1,0 +1,436 @@
+/* =========================================================
+   MAMBODLA PROFESSIONAL ACCOUNTANTS
+   404 PAGE
+========================================================= */
+
+.error-page-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(185, 147, 82, 0.08),
+      transparent 28rem
+    ),
+    linear-gradient(135deg, #fbfbfa 0%, #ffffff 58%, #faf8f4 100%);
+}
+
+.error-page-body .site-header {
+  flex: 0 0 auto;
+  border-bottom: 1px solid rgba(11, 34, 57, 0.08);
+}
+
+.error-main {
+  flex: 0 0 auto;
+  display: block;
+}
+
+.error-stage {
+  width: 100%;
+  padding: 1.5rem 0 2rem;
+}
+
+.error-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 8rem);
+  margin-top: 0;
+}
+
+/* =========================================================
+   COPY
+========================================================= */
+
+.error-copy {
+  max-width: 720px;
+}
+
+.error-eyebrow {
+  margin: 0 0 1.2rem;
+  color: var(--color-gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.error-title {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(3rem, 6.2vw, 6.35rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.error-title span {
+  display: block;
+  color: var(--color-gold);
+}
+
+.error-rule {
+  width: 76px;
+  height: 1px;
+  margin: clamp(2rem, 3vw, 2.75rem) 0;
+  background: var(--color-gold);
+}
+
+.error-description {
+  max-width: 650px;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.8;
+}
+
+.error-guidance {
+  margin: 1rem 0 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: clamp(2rem, 4vw, 2.8rem);
+}
+
+.error-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+  min-width: 190px;
+  padding: 0.88rem 1.05rem;
+  border: 1px solid rgba(11, 34, 57, 0.14);
+  border-radius: var(--radius-card);
+  font-size: 0.84rem;
+  font-weight: 500;
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.error-button span:last-child {
+  color: var(--color-gold);
+  transition: transform var(--transition-fast);
+}
+
+.error-button:hover,
+.error-button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.error-button:hover span:last-child,
+.error-button:focus-visible span:last-child {
+  transform: translateX(3px);
+}
+
+.error-button-primary {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+.error-button-primary:hover,
+.error-button-primary:focus-visible {
+  background: var(--color-navy-soft);
+  border-color: var(--color-navy-soft);
+}
+
+.error-button-secondary {
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--color-navy);
+}
+
+.error-button-secondary:hover,
+.error-button-secondary:focus-visible {
+  border-color: rgba(185, 147, 82, 0.55);
+}
+
+.error-contact-link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.3rem;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+
+.error-contact-link span {
+  color: var(--color-navy);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(185, 147, 82, 0.6);
+  text-underline-offset: 0.25rem;
+}
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.error-visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.error-visual-frame {
+  position: relative;
+  width: min(100%, 500px);
+  min-height: clamp(340px, 52vh, 420px);
+  padding: clamp(2rem, 4vw, 3.2rem);
+  overflow: hidden;
+  border: 1px solid rgba(11, 34, 57, 0.12);
+  border-radius: var(--radius-card);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(247, 244, 237, 0.86)
+  );
+  box-shadow: 0 24px 70px rgba(11, 34, 57, 0.07);
+}
+
+.error-visual-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 3px;
+  background: var(--color-gold);
+}
+
+.error-visual-kicker {
+  position: relative;
+  z-index: 2;
+  color: var(--color-gold);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.error-number {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  margin-top: clamp(2.5rem, 5vw, 4.5rem);
+  color: var(--color-navy);
+  font-size: clamp(6rem, 12vw, 10.5rem);
+  font-weight: 500;
+  line-height: 0.8;
+  letter-spacing: -0.085em;
+}
+
+.error-zero {
+  color: var(--color-gold);
+}
+
+.error-visual-rule {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 1px;
+  margin-top: clamp(2.4rem, 5vw, 4rem);
+  background: rgba(11, 34, 57, 0.15);
+}
+
+.error-visual-meta {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  color: var(--color-navy);
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.error-ledger-lines {
+  position: absolute;
+  right: -10%;
+  bottom: -7%;
+  left: 38%;
+  display: grid;
+  gap: 1rem;
+  transform: rotate(-11deg);
+  opacity: 0.75;
+}
+
+.error-ledger-lines span {
+  display: block;
+  height: 1px;
+  background: rgba(185, 147, 82, 0.22);
+}
+
+.error-ledger-lines span:nth-child(2) {
+  width: 83%;
+}
+
+.error-ledger-lines span:nth-child(3) {
+  width: 64%;
+}
+
+.error-ledger-lines span:nth-child(4) {
+  width: 92%;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.error-page-body .site-footer {
+  flex: 0 0 auto;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (min-width: 921px) and (max-height: 800px) {
+  .error-stage {
+    padding: 1rem 0 1.25rem;
+  }
+
+  .error-layout {
+    gap: clamp(2.5rem, 6vw, 6rem);
+  }
+
+  .error-title {
+    font-size: clamp(3.4rem, 5.2vw, 4.8rem);
+  }
+
+  .error-rule {
+    margin: 1.4rem 0;
+  }
+
+  .error-description {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .error-guidance {
+    margin-top: 0.7rem;
+  }
+
+  .error-actions {
+    margin-top: 1.4rem;
+  }
+
+  .error-visual-frame {
+    min-height: 360px;
+  }
+
+  .error-number {
+    margin-top: 2rem;
+    font-size: clamp(6rem, 10vw, 8.5rem);
+  }
+
+  .error-visual-rule {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .error-layout {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+  .error-copy {
+    max-width: 760px;
+  }
+
+  .error-visual {
+    justify-content: stretch;
+  }
+
+  .error-visual-frame {
+    width: 100%;
+    min-height: 340px;
+  }
+
+  .error-number {
+    font-size: clamp(6.2rem, 22vw, 10rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .error-stage {
+    padding-block: 3.4rem 4rem;
+  }
+
+  .error-layout {
+    gap: 2.7rem;
+  }
+
+  .error-eyebrow {
+    margin-bottom: 0.95rem;
+    font-size: 0.64rem;
+  }
+
+  .error-title {
+    font-size: clamp(2.55rem, 12vw, 4.4rem);
+    line-height: 1.02;
+  }
+
+  .error-rule {
+    margin: 1.9rem 0;
+  }
+
+  .error-description {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .error-guidance {
+    font-size: 0.88rem;
+  }
+
+  .error-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .error-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .error-visual-frame {
+    min-height: 300px;
+    padding: 1.5rem;
+  }
+
+  .error-number {
+    margin-top: 2.7rem;
+    font-size: clamp(5.8rem, 29vw, 8.5rem);
+  }
+
+  .error-visual-rule {
+    margin-top: 2.6rem;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .error-button,
+  .error-button span:last-child {
+    transition: none;
+  }
+
+  .error-button:hover,
+  .error-button:focus-visible,
+  .error-button:hover span:last-child,
+  .error-button:focus-visible span:last-child {
+    transform: none;
+  }
+}
