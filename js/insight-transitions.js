@@ -28,30 +28,34 @@
     return new URL(value, window.location.href);
   };
 
-  const isInsightsHub = (url) => {
+  const normalizePath = (url) => {
     if (!url) {
-      return false;
+      return "";
     }
 
-    return url.pathname.endsWith("/insights.html");
+    let path = url.pathname.replace(/\/+$/, "");
+
+    if (path.endsWith(".html")) {
+      path = path.slice(0, -5);
+    }
+
+    return path || "/";
+  };
+
+  const isInsightsHub = (url) => {
+    return normalizePath(url).endsWith("/insights");
   };
 
   const isResilienceArticle = (url) => {
-    if (!url) {
-      return false;
-    }
-
-    return url.pathname.endsWith(
-      "/insights/building-a-resilient-business.html",
+    return normalizePath(url).endsWith(
+      "/insights/building-a-resilient-business",
     );
   };
 
   const isInsightsFamily = (url) => {
-    if (!url) {
-      return false;
-    }
+    const path = normalizePath(url);
 
-    return isInsightsHub(url) || url.pathname.includes("/insights/");
+    return isInsightsHub(url) || path.includes("/insights/");
   };
 
   const isInsightsInternalNavigation = (fromURL, toURL) => {
@@ -75,7 +79,7 @@
       toURL.origin === window.location.origin &&
       isInsightsFamily(fromURL) &&
       isInsightsFamily(toURL) &&
-      fromURL.pathname !== toURL.pathname
+      normalizePath(fromURL) !== normalizePath(toURL)
     );
   };
 
