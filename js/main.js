@@ -52,6 +52,91 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
 }
 
 /* =========================================================
+   SERVICES — HASH ENTRY POSITION
+   Home service cards → correct service detail
+========================================================= */
+
+(() => {
+  const serviceHashes = new Set([
+    "#accounting",
+    "#audit-tax",
+    "#payroll",
+    "#business-advisory",
+  ]);
+
+  const settleServiceHash = () => {
+    const hash = window.location.hash;
+
+    if (!serviceHashes.has(hash)) {
+      return;
+    }
+
+    const target = document.querySelector(hash);
+
+    if (!target) {
+      return;
+    }
+
+    /*
+      Cross-document transitions and native smooth
+      anchor scrolling can compete during page arrival.
+
+      Own the final position explicitly.
+    */
+
+    const root = document.documentElement;
+
+    const previousScrollBehavior = root.style.scrollBehavior;
+
+    root.style.scrollBehavior = "auto";
+
+    target.scrollIntoView({
+      behavior: "auto",
+      block: "start",
+    });
+
+    requestAnimationFrame(() => {
+      root.style.scrollBehavior = previousScrollBehavior;
+    });
+  };
+
+  /*
+    Immediate fallback for ordinary navigation
+    and hosted environments.
+  */
+
+  settleServiceHash();
+
+  /*
+    Cross-document View Transition path.
+  */
+
+  window.addEventListener("pagereveal", (event) => {
+    settleServiceHash();
+
+    if (!event.viewTransition) {
+      return;
+    }
+
+    event.viewTransition.finished.finally(() => {
+      requestAnimationFrame(() => {
+        settleServiceHash();
+      });
+    });
+  });
+
+  /*
+    BFCache / restored document fallback.
+  */
+
+  window.addEventListener("pageshow", () => {
+    requestAnimationFrame(() => {
+      settleServiceHash();
+    });
+  });
+})();
+
+/* =========================================================
    SERVICES — DETAIL CARD FLIP
    ONE ACTIVE SERVICE AT A TIME
 ========================================================= */
