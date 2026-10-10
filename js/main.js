@@ -78,10 +78,11 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
     }
 
     /*
-      Cross-document transitions and native smooth
-      anchor scrolling can compete during page arrival.
+      Preserve the approved cross-document page transition.
 
-      Own the final position explicitly.
+      Once the Services document exists, own the anchor position
+      exactly once and temporarily disable global smooth scrolling
+      so there is no second animated journey inside the page.
     */
 
     const root = document.documentElement;
@@ -101,39 +102,11 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
   };
 
   /*
-    Immediate fallback for ordinary navigation
-    and hosted environments.
+    One authoritative placement only.
+    No pagereveal / transition-finished / pageshow repeats.
   */
 
   settleServiceHash();
-
-  /*
-    Cross-document View Transition path.
-  */
-
-  window.addEventListener("pagereveal", (event) => {
-    settleServiceHash();
-
-    if (!event.viewTransition) {
-      return;
-    }
-
-    event.viewTransition.finished.finally(() => {
-      requestAnimationFrame(() => {
-        settleServiceHash();
-      });
-    });
-  });
-
-  /*
-    BFCache / restored document fallback.
-  */
-
-  window.addEventListener("pageshow", () => {
-    requestAnimationFrame(() => {
-      settleServiceHash();
-    });
-  });
 })();
 
 /* =========================================================
@@ -487,6 +460,7 @@ if (menuToggle && mobileNav && mobileNavLinks.length) {
     "services.html",
     "insights.html",
     "contact.html",
+    "faq.html",
   ]);
 
   const pageName = window.location.pathname.split("/").pop() || "index.html";
