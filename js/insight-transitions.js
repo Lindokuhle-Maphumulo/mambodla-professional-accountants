@@ -398,17 +398,42 @@
   });
 
   /* =====================================================
-       INCOMING DOCUMENT
-    ====================================================== */
+   INCOMING DOCUMENT
+===================================================== */
 
   window.addEventListener("pagereveal", (event) => {
-    if (!event.viewTransition) {
-      return;
-    }
-
     const fromURL = getURL(window.navigation?.activation?.from?.url);
 
     const toURL = getURL(window.location.href);
+
+    const directPortalEntry =
+      isResilienceArticle(toURL) && toURL.hash === "#article-image";
+
+    /*
+      HOSTED / NON-TRANSITION FALLBACK
+
+      If the destination is the article-image portal
+      but the browser does not expose a cross-document
+      View Transition, still establish the correct
+      image position and contextual navigation.
+  */
+
+    if (!event.viewTransition) {
+      if (directPortalEntry) {
+        const articleImage = document.querySelector("#article-image");
+
+        if (articleImage) {
+          articleImage.scrollIntoView({
+            behavior: "instant",
+            block: "start",
+          });
+        }
+
+        showPortalNav();
+      }
+
+      return;
+    }
 
     const internalInsightsNavigation = isInsightsInternalNavigation(
       fromURL,
@@ -446,14 +471,14 @@
     const portalEntry = isPortalEntry(fromURL, toURL);
 
     /*
-                IMAGE PORTAL
+      IMAGE PORTAL
 
-                Establish the final article-image
-                scroll position immediately.
+      Establish the final article-image
+      scroll position immediately.
 
-                The bridge transition itself supplies
-                all visible movement.
-            */
+      The bridge transition itself supplies
+      all visible movement.
+  */
 
     if (portalEntry) {
       const articleImage = document.querySelector("#article-image");
@@ -472,16 +497,47 @@
       clearSharedImage(image);
 
       /*
-                        IMPORTANT:
-
-                        Only AFTER the bridge is
-                        completely stationary do we
-                        show the contextual navbar.
-                    */
+        Only AFTER the bridge is completely
+        stationary do we show the contextual navbar.
+    */
 
       if (portalEntry) {
         showPortalNav();
       }
     });
+  });
+
+  /* =====================================================
+   DIRECT / RESTORED PORTAL FALLBACK
+===================================================== */
+
+  const restorePortalFromURL = () => {
+    const currentURL = getURL(window.location.href);
+
+    if (
+      !isResilienceArticle(currentURL) ||
+      currentURL.hash !== "#article-image"
+    ) {
+      return;
+    }
+
+    if (document.body.classList.contains(PORTAL_NAV_CLASS)) {
+      return;
+    }
+
+    const articleImage = document.querySelector("#article-image");
+
+    if (articleImage) {
+      articleImage.scrollIntoView({
+        behavior: "instant",
+        block: "start",
+      });
+    }
+
+    showPortalNav();
+  };
+
+  window.addEventListener("pageshow", () => {
+    window.setTimeout(restorePortalFromURL, 650);
   });
 })();
